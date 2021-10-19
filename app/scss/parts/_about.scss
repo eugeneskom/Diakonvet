@@ -1,0 +1,15 @@
+.about{
+  padding: 97px 0 80px;
+  line-height: 1.5;
+  &__inner{
+    @include rmin($r-md){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__block{
+    &:not(:last-child){
+      margin-right: 41px;
+    }
+  }
+}

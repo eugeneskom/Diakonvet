@@ -1,0 +1,43 @@
+.section {
+
+  .slick-arrow {
+    // position: absolute;
+    top: -110px;
+    border: 1px solid #C2CBD7;
+    background-color: transparent;
+  }
+
+  .slick-next {
+    left: calc(100% - 85px);
+  }
+
+  .slick-prev {
+    // left: 90%;
+    left: calc(100% - 155px);
+  }
+
+  .slick-slide {
+    margin: 0 15px;
+
+    @include r($r-md) {
+      display: flex;
+      justify-content: center;
+    }
+    @include r($r-lg){
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+  }
+
+  .slick-dots{
+    bottom: -50px;
+    li{
+      cursor: pointer;
+      button{
+        background-color: $t-title;
+      }
+    }
+  }
+
+}

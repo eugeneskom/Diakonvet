@@ -1,0 +1,37 @@
+.reviews {
+
+  &__slide {
+    border: 1px solid $t-10;
+    padding: 72px 61px 80px 42px;
+    display: flex !important;
+    justify-content: space-between;
+  }
+
+  &__text {
+    max-width: 828px;
+    padding-left: 90px;
+    position: relative;
+
+    &::before {
+      @include ptl;
+      background-image: url(../images/reviews/mark.svg);
+      background-repeat: no-repeat;
+      width: 60px;
+      height: 48px;
+    }
+  }
+}
+
+.person{
+  &__avatar{
+    border-radius: 50%;
+    border: 5px solid $thirdly-bg;
+    width: 103px;
+    height: 103px;
+    background-color: $dark-bg;
+  }
+  &__img{
+    object-fit: contain;
+
+  }
+}

@@ -1,0 +1,73 @@
+.card {
+  border: 1px solid $t-10;
+
+  max-width: 370px;
+  color: $t-100;
+
+  @include r($r-md) {
+    min-width: 290px;
+    max-width: 290px;
+  }
+
+  @include r($r-lg) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @include rmin($r-lg) {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    background-color: $t-lightest;
+    border-bottom: 1px solid $t-10;
+
+
+
+    &--blue {
+      height: 150px;
+      background: linear-gradient(160.14deg, #345D92 -49.32%, #82B9EB 99.41%);
+
+    }
+  }
+
+  &__bottom {
+    padding: 17px 28px 16px 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    min-height: 214px;
+
+    &--short {
+      min-height: 80px;
+    }
+  }
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include o-bold;
+    @include text-clamp(3);
+
+    &--small{
+      flex-basis: 49px;
+    }
+    flex-basis: 80px;
+  }
+
+
+
+  &__img {
+    width: 170px;
+    height: 150px;
+    background-size: contain;
+  }
+
+  &__text{
+    @include text-clamp(3);
+  }
+}

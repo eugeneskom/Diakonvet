@@ -1,0 +1,11 @@
+.new {
+  .slick-slide {
+    height: 100%; 
+  }
+  .slick-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+}

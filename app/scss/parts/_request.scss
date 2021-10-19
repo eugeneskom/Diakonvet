@@ -1,0 +1,14 @@
+.request{
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .container{
+    z-index: 1;
+  }
+  &::after{
+    @include bgcover;
+    background-color: rgba(#3D3A71, 0.84);
+  }
+
+
+}

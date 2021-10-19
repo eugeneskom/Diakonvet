@@ -1,0 +1,40 @@
+.brands {
+  @include r($r-md) {
+    .container {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin-right: 69px;
+    @include r($r-lg){
+      margin: 0;
+      margin-bottom: 86px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    max-width: 755px;
+    @include r($r-lg){
+      justify-content: center;
+    }
+  }
+
+  &__slogan {
+    @include r($r-lg) {
+      display: none;
+    }
+  }
+
+
+  .slick-slide {
+    border: 1px solid $t-10;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

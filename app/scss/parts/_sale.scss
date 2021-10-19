@@ -1,0 +1,29 @@
+.sale{
+  &__slider{
+    display: flex;
+  }
+
+
+
+
+  .slick-slide {
+    height: 100%; 
+    &.slick-current.slick-active{
+      display: flex;
+      justify-content: flex-start;
+    }
+
+  }
+  .slick-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin: 0 -15px;
+    @include r($r-md){
+      margin: 0;
+    }
+  }
+
+  
+}

@@ -1,0 +1,56 @@
+.cooperation {
+  padding: 55px 0 35px;
+  color: $t-lightest;
+
+  &__title{
+    text-align: center;
+    color: $t-lightest;
+    margin-bottom: 61px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($r-md) {
+      flex-wrap: wrap;
+    }
+
+  }
+
+
+}
+
+.coop-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+
+  @include r($r-md) {
+    flex: 50%;
+  }
+
+  @include rmin($r-md) {}
+
+  &__top {
+    width: 102px;
+    height: 102px;
+    border-radius: 50%;
+    background-color: $t-lightest;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__text {
+    text-align: center;
+
+    span {
+      display: block;
+    }
+  }
+}

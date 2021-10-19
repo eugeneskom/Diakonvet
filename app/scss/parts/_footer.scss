@@ -1,0 +1,99 @@
+.footer {
+  background-color: $footer-bg;
+  color: $t-lightest;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 38px 0 82px;
+  }
+
+  &__col {
+    // flex: 1;
+    &:not(:first-child){
+      padding-top: 42px;
+    }
+  }
+  &__title{
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 26px;
+    @include r($r-md){
+      display: none;
+    }
+  }
+  &__link{
+    font-size: 15px;
+  }
+
+  &__bottom{
+    padding: 8px 0 9px;
+    background-color: $footer-bottom-bg;
+  }
+
+ 
+}
+
+.info{
+  flex-basis: 194px;
+  font-size: 13px;
+  line-height: 1.4;
+  @include r($r-md){
+    flex-basis: 100%;
+  }
+  &__title{
+    font-size: 14px;
+    line-height: 1.35;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  &__yandex{
+    margin-bottom: 23px;
+    max-width: 161px;
+    height: 50px;
+  }
+  &__about{
+    margin-bottom: 9px;
+  }
+  &__link{
+    color: $f-policy;
+    &:not(:last-child){
+      margin-bottom: 132px;
+    }
+  }
+}
+.reagents{
+  flex-basis: 228px;
+  @include r($r-md){
+    flex-basis: 50%;
+  }
+}
+.equipment{
+  flex-basis: 228px;
+  @include r($r-md){
+    flex-basis: 50%;
+  }
+}
+.company{
+  @include o-bold;
+  &__link{
+    &:not(:last-child){
+      margin-bottom: 25px;
+    }
+  }
+  @include r($r-md){
+    display: none;
+  }
+}
+.contacts{
+  flex-basis: 224px;
+  @include r($r-md){
+    flex-basis: 100%;
+  }
+  &__phone{
+    display: block;
+    font-size: 24px;
+    line-height: 1.66;
+  }
+}

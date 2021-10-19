@@ -1,0 +1,42 @@
+.recommendation {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 172px 0 98px;
+  background-position: center right;
+
+  &__slide {
+    max-width: 742px;
+    margin-right: auto;
+    @include r($r-md){
+      max-width: 289px;
+    }
+  }
+
+  &__offer{
+    margin-bottom: 38px;
+    font-size: 23px;
+    line-height: 1.4;
+    @include r($r-md){
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    background-color: rgba($t-lightest, 0.67);
+    padding: 43px 17px 33px 52px;
+    line-height: 1.5;
+    @include r($r-md){
+      padding: 26px 18px 39px 20px;
+      font-size: 14px;
+    }
+  }
+
+  .slick-slide.slick-current {
+    display: flex !important;
+    justify-content: flex-start !important;
+    margin: 0;
+    @include r($r-md){
+      justify-content: center !important;
+    }
+  }
+}
