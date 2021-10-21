@@ -8,11 +8,6 @@
 
   .slick-slide {
     height: 100%; 
-    &.slick-current.slick-active{
-      display: flex;
-      justify-content: flex-start;
-    }
-
   }
   .slick-track {
     display: flex;

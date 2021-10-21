@@ -1,15 +1,81 @@
-.about{
+.about {
   padding: 97px 0 80px;
   line-height: 1.5;
-  &__inner{
-    @include rmin($r-md){
+
+  &__inner {
+    position: relative;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+
+    &.active {
+      transition: max-height 0.5 ease-in-out;
+
+      @include r($r-md) {
+        max-height: 100%;
+        overflow-y: hidden;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+    
+    &::after {
+      content: "";
+      position: absolute;
+      height: 65px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+    }
+
+    @include rmin($r-md) {
       display: flex;
       justify-content: space-between;
+      &::after{
+        display: none;
+      }
+    }
+
+    @include r($r-md) {
+      max-height: 265px;
+      overflow-y: hidden;
     }
   }
-  &__block{
-    &:not(:last-child){
-      margin-right: 41px;
+
+  &__block {
+    @include rmin($r-md) {
+      &:not(:last-child) {
+        margin-right: 41px;
+        margin-bottom: 0;
+      }
+    }
+
+    @include r($r-md) {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
     }
   }
+
+
+  &__toggle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: $t-title;
+    font-size: 14px;
+    line-height: 1.35;
+    text-decoration: underline;
+    @include no-btn;
+    cursor: pointer;
+    @include rmin($r-md){
+      display: none;
+    }
+  }
+
+
 }

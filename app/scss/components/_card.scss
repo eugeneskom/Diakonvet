@@ -54,9 +54,11 @@
     @include text-clamp(3);
 
     &--small{
-      flex-basis: 49px;
+      // flex-basis: 49px;
+      min-height: 49px;
     }
-    flex-basis: 80px;
+    // flex-basis: 80px;
+    min-height: 80px;
   }
 
 

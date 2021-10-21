@@ -1,5 +1,31 @@
 
 $(function () {
+  // Navigation toggle
+  let navToggle = document.querySelector('.navtoggle');
+  let header = document.querySelector('.header');
+
+  navToggle.addEventListener('click', () => {
+    console.log('1')
+    header.classList.toggle('active');
+  })
+
+  // About text height toggle
+
+  let aboutToggle = document.querySelector('.about__toggle');
+  let aboutInner = document.querySelector('.about__inner');
+
+  aboutToggle.addEventListener('click', () => {
+    aboutInner.classList.toggle('active');
+    if(aboutInner.classList.contains('active')){
+      aboutToggle.innerHTML = 'Показать меньше'
+    }else{
+      aboutToggle.innerHTML = 'Показать все'
+
+    }
+  })
+
+
+
   $('.hero__slider').slick({
     dots: true,
   });
@@ -129,7 +155,7 @@ $(function () {
 
   });
   $('.articles__slider').slick({
-    slidesToShow: 3,
+    // slidesToShow: 3,
     arrows: false,
     variableWidth: true,
 
@@ -140,7 +166,12 @@ $(function () {
       },
       {
         breakpoint: 992,
-        slidesToShow: 2,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+          variableWidth: false,
+
+        },
 
       },
       {
@@ -156,7 +187,7 @@ $(function () {
 
   });
 
-  $('.brands__slider').slick({
+  $('.companies__slider').slick({
     slidesToShow: 6,
     slidesToScroll: 1,
     responsive: [

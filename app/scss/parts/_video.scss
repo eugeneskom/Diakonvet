@@ -31,10 +31,12 @@
   &__bottom {
     padding: 20px 11px 17px 21px;
     background-color: $t-lightest;
+    min-height: 117px;
   }
 
   &__title {
     font-size: 18px;
     line-height: 1.33;
+    @include text-clamp(3);
   }
 }

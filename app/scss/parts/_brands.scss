@@ -1,4 +1,4 @@
-.brands {
+.companies {
   @include r($r-md) {
     .container {
       padding: 0;
@@ -7,7 +7,8 @@
 
   &__title {
     margin-right: 69px;
-    @include r($r-lg){
+
+    @include r($r-lg) {
       margin: 0;
       margin-bottom: 86px;
     }
@@ -17,7 +18,8 @@
     display: flex;
     justify-content: space-between;
     max-width: 755px;
-    @include r($r-lg){
+
+    @include r($r-lg) {
       justify-content: center;
     }
   }
@@ -31,6 +33,7 @@
 
   .slick-slide {
     border: 1px solid $t-10;
+
     div {
       display: flex;
       justify-content: center;

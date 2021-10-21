@@ -1,4 +1,15 @@
 .header {
+  @include r($r-md) {
+    max-height: 76px;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  }
+
+  &.active {
+    max-height: 100%;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  overflow-y: hidden;
 
   &__top {
     display: flex;
@@ -92,19 +103,51 @@
 
 .nav {
   &__list {
+
     @include rmin($r-md) {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      flex-wrap: wrap;
     }
+  }
 
-    @include r($r-md) {}
+  &__item {
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
   }
 
   &__link {
     display: block;
     padding: 15px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.13);
+    position: relative;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover{
+      color: $t-100;
+      text-shadow: 0 0 1px $t-100;
+    }
+    &:focus{
+      outline: transparent; 
+      &::before{
+        transform: scaleX(1);
+      }
+    }
+    &:active{
+      text-shadow: none;
+    }
   }
 }
 
@@ -120,14 +163,17 @@
 .contact {
   width: 54%;
   text-align: center;
+  word-break: keep-all;
 
-  @include r($r-lg) {
+  @include r($r-xl) {
     width: 100%;
   }
-  @include r($r-lg){
+
+  @include r($r-lg) {
     order: 2;
 
   }
+
   @include r($r-md) {
     background-color: $t-title;
     width: 100%;

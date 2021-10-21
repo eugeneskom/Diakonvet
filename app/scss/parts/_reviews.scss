@@ -1,16 +1,32 @@
 .reviews {
 
+  &__title{
+    @include r($r-md){
+      margin-bottom: 11px;
+    }
+  }
+
   &__slide {
     border: 1px solid $t-10;
     padding: 72px 61px 80px 42px;
     display: flex !important;
     justify-content: space-between;
+    @include r($r-md){
+      flex-direction: column;
+      padding: 0;
+      border: none;
+    }
   }
 
   &__text {
     max-width: 828px;
     padding-left: 90px;
     position: relative;
+
+    @include r($r-md){
+      padding: 70px 0 0;
+      margin-bottom: 22px;
+    }
 
     &::before {
       @include ptl;
@@ -19,19 +35,41 @@
       width: 60px;
       height: 48px;
     }
+
+    
   }
 }
 
 .person{
+  line-height: 1.5;
+  @include r($r-md){
+    order: 1;
+    display: flex;
+    align-items: center;
+  }
   &__avatar{
     border-radius: 50%;
     border: 5px solid $thirdly-bg;
     width: 103px;
     height: 103px;
     background-color: $dark-bg;
+    @include r($r-md){
+      margin-right: 14px;
+      width: 62px;
+      height: 62px;
+    }
   }
   &__img{
     object-fit: contain;
-
+  }
+  &__name,
+  &__company{
+    display: block;
+  }
+  &__name{
+    margin-bottom: 3px;
+  }
+  &__company{
+    color: $t-title;
   }
 }

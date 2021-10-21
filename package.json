@@ -26,6 +26,7 @@
     "slick-slider": "^1.8.2"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "gulp-cli": "^1.4.0",
     "node-sass": "^6.0.1",
     "resolve-url": "^0.2.1",

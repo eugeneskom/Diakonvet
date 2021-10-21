@@ -10,6 +10,10 @@
 
   .slick-slide {
     height: 100%;
+    div{
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .slick-track {
@@ -27,11 +31,13 @@
   max-width: 370px;
   display: flex !important;
   flex-direction: column;
-  @include rmin($r-md){
-    &:not(:last-child){
+
+  @include rmin($r-md) {
+    &:not(:last-child) {
       margin-right: 30px;
     }
   }
+
   &__top {
     max-height: 250px;
   }
@@ -42,7 +48,8 @@
 
   &__content {
     padding: 31px 26px 0;
-    @include r($r-lg){
+
+    @include r($r-lg) {
       padding: 20px 12px 13px 18px;
     }
   }
@@ -52,8 +59,6 @@
     line-height: 1.33;
     font-size: 18px;
     min-height: 83px;
-    // @include text-clamp(3);
-
   }
 
   &__text {

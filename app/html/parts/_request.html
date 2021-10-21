@@ -9,14 +9,29 @@
         </div>
       </div>
       <div class="request__block form-block">
-        <h3 class="form-block__title section__title">Заявка</h3>
-        <div class="form-block__subtitle">
+        <h3 class="form-block__title">Заявка</h3>
+        <div class="form-block__text">
           <p>Заполните Ваши контактные данные и мы отправим «Методические рекомендации»</p>
         </div>
         <form action="" class="form-block__form">
           <input type="text" class="form-block__input" placeholder="Имя">
           <input type="text" class="form-block__input" placeholder="E-mail">
           <input type="text" class="form-block__input" placeholder="Телефон">
+          <div class="form-block__wrapper">
+            <img src="images/captcha.png" class="form-block__captcha">
+            <button class="btn form-block__btn" type="submit">Отправить</button>
+          </div>
+          <div class="form-block__check">
+            <label class="form-block__label">
+              <input type="checkbox" class="form-block__checkbox" checked="checked">
+              <span class="form-block__checkmark"></span>
+            </label>
+            <div class="form-block__confirmation">
+              <p>
+                Нажимая кнопку «Отправить», я даю <a class="form-block__data" href="#" >свое согласие на обработку моих персональных данных</a>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных
+              </p>
+            </div>
+          </div>
         </form>
       </div>
     </div>

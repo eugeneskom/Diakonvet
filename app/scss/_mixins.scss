@@ -87,3 +87,10 @@
   bottom: 0;
   left: 0;
 }
+
+@mixin no-btn{
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+  padding: 0;
+}
