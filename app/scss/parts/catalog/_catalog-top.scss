@@ -1,0 +1,16 @@
+.catalog {
+  &__top {
+    max-width: 1250px;
+    margin-left: calc((100vw - 1200px) / 2);
+    padding: 0 15px;
+    @include r($r-xl){
+      margin-left: 0;
+    }
+  }
+
+  .cart{
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+}

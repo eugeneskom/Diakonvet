@@ -6,6 +6,7 @@
 @import 'customclasses';
 @import 'global';
 @import 'parts/header';
+@import 'components/cart';
 @import 'parts/hero';
 @import 'components/slider';
 @import 'components/card';
@@ -26,3 +27,8 @@
 @import 'parts/reviews';
 @import 'parts/clients';
 @import 'parts/footer';
+@import 'parts/catalog/catalog-top';
+@import 'parts/catalog/catalog-sidebar';
+@import 'parts/catalog/shop';
+@import 'components/product';
+@import 'components/pagination';

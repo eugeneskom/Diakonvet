@@ -58,6 +58,9 @@
     right: 13%;
     background-color: $t-lightest;
     border-radius: 50%;
+    @include r($r-md){
+      display: none;
+    }
   }
 
   &__cart-img {

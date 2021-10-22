@@ -1,0 +1,137 @@
+.product {
+  max-width: 269px;
+  width: 100%;
+  border: 1px solid $t-10;
+  margin-left: 30px;
+  margin-bottom: 30px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid $t-10;
+    position: relative;
+  }
+
+  &__thumb {
+    max-width: 170px;
+    width: 100%;
+    max-height: 170px;
+  }
+
+  &__like {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(95, 95, 95, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover{
+      background: #DFF2D0;
+    }
+    &:focus{
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+    &:active{
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+  }
+
+  &__heart {
+    display: block;
+    width: 18px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left 3px top 3px right 3px bottom 3px;
+  }
+
+  &__body {
+    padding: 17px 14px 16px 23px;
+    line-height: 1.35;
+  }
+
+  &__category {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: $t-light-dark;
+  }
+
+  &__title {
+    @include o-bold;
+    font-size: 16px;
+    min-height: 70px;
+    padding-bottom: 9px;
+    @include text-clamp(3);
+  }
+
+  &__price {
+    color: $t-title;
+    font-size: 22px;
+    @include o-bold;
+    margin-bottom: 20px;
+  }
+
+  &__present {
+    font-size: 14px;
+    color: $t-main;
+    &--true{
+      position: relative;
+      padding-left: 19px;
+      &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 14px;
+        height: 10px;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-image: url('../images/icons/present.svg');
+        background-size: contain;
+      }
+    }
+    &--false{
+      color: $t-empty;
+    }
+  }
+
+  &__cart-link {
+    display: block;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: $link-hover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+      background-color: $t-100;
+    }
+    &:focus{
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+      outline: transparent;
+    }
+    &:active{
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+      background-color: $link-hover;
+
+    }
+  }
+
+  &__cart {
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
+}

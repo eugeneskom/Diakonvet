@@ -1,0 +1,90 @@
+.catalog {
+  &__sidebar {
+    max-width: 269px;
+    width: 100%;
+  }
+}
+
+.assortment {
+  background-color: $sidebar-bg;
+
+
+  &__title {
+    position: relative;
+    color: $t-title;
+    @include o-bold;
+    min-height: 59px;
+    padding: 3px 16px 3px 48px;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid $t-title;
+    border-bottom: 1px solid $list-border;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 1.4;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+
+    &::after {
+      right: 11px;
+      width: 10px;
+      height: 5px;
+      background-image: url(../images/icons/arrow-top.svg);
+      background-size: cover;
+    }
+
+    &--equipment {
+      &::before {
+        width: 23px;
+        height: 16px;
+        left: 20px;
+        background-image: url(../images/icons/equipment.svg);
+      }
+    }
+
+    &--reagents {
+      border-bottom: 2px solid $t-title;
+
+      &::before {
+        width: 20px;
+        height: 23px;
+        left: 20px;
+        background-image: url(../images/icons/reagents.svg);
+      }
+    }
+
+  }
+
+  &__subcategory {
+    padding: 3px 16px;
+    min-height: 59px;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $list-border;
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 1.2;
+    transition: color 0.2s ease-in;
+    padding: 6px 0;
+
+    &:hover{
+      color: $link-hover;
+    }
+  }
+
+}

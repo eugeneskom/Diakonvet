@@ -1,0 +1,76 @@
+.pagination {
+  margin-left: 30px;
+
+  .page-numbers {
+    display: inline-block;
+    padding: 7px 15px;
+    line-height: 1.5;
+    color: $t-title;
+    border: 1px solid $t-title;
+
+    &:hover {
+      background-color: $t-title;
+      color: $t-lightest;
+    }
+
+    &:focus {
+      outline: transparent;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+
+    &:active {
+      background-color: $t-lightest;
+      color: $t-title;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    &.current {
+      background-color: $t-title;
+      color: $t-lightest;
+    }
+  }
+
+  .prev,
+  .next {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+      &::after {
+        filter: invert(86%) sepia(100%) saturate(0%) hue-rotate(224deg) brightness(108%) contrast(104%);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 6px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
+  }
+
+  .next {
+    &::after {
+      background-image: url('../images/icons/pagination-right.svg');
+    }
+  }
+
+  .prev {
+    &::after {
+      background-image: url('../images/icons/pagination-left.svg');
+    }
+  }
+
+
+}
