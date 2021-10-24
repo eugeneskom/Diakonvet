@@ -1,11 +1,77 @@
-.shop{
+.shop {
   width: 100%;
+  padding: 13px 0 100px;
+
+  &__products {
+    margin: 0 -15px;
+  }
+
+  &__product {
+    flex-basis: calc((100% - 90px) / 3);
+    margin: 0 15px;
+  }
+
 }
 
-.shop-filter{
+.shop-filter {
   width: 100%;
   margin-bottom: 53px;
+  line-height: 1.5;
+  color: $t-empty;
   &__label{
-    line-height: 1.5;
+    margin-right: 8px;
   }
+
+  &__select{
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__checked{
+    color: $t-title;
+    position: relative;
+    padding-right: 15px;
+    &::after{
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 6px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('../images/icons/select-arrow.svg');
+    }
+  }
+
+  &__dropdown{
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background-color: $sidebar-bg;
+    top: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    &--active{
+      display: block;
+      min-width: 200px;
+      max-width: 300px;
+    }
+  }
+
+  &__option{
+    padding: 15px 15px;
+    &:hover{
+      background-color: $dark-bg;
+    }
+  }
+
+
+  .jquery-selectbox{
+    &__dropdown ul{
+      top: 5px;
+    }
+  }
+  
 }

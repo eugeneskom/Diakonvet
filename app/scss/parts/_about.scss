@@ -70,10 +70,12 @@
     font-size: 14px;
     line-height: 1.35;
     text-decoration: underline;
+    transform: scale(1);
+
     @include no-btn;
     cursor: pointer;
     @include rmin($r-md){
-      display: none;
+      transform: scale(0);
     }
   }
 

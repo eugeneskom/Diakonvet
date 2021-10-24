@@ -2,6 +2,7 @@
   &__sidebar {
     max-width: 269px;
     width: 100%;
+    margin-right: 30px;
   }
 }
 
@@ -63,6 +64,13 @@
       }
     }
 
+  }
+
+  &__list{
+    display: none;
+    &.active{
+      display: block;
+    }
   }
 
   &__subcategory {

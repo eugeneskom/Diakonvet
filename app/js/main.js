@@ -1,28 +1,27 @@
 
 $(function () {
-  // Navigation toggle
-  let navToggle = document.querySelector('.navtoggle');
-  let header = document.querySelector('.header');
+  // // Navigation toggle
+  // let navToggle = document.querySelector('.navtoggle');
+  // let header = document.querySelector('.header');
 
-  navToggle.addEventListener('click', () => {
-    console.log('1')
-    header.classList.toggle('active');
-  })
+  // navToggle.addEventListener('click', () => {
+  //   header.classList.toggle('active');
+  // })
 
-  // About text height toggle
+  // // About text height toggle
 
-  let aboutToggle = document.querySelector('.about__toggle');
-  let aboutInner = document.querySelector('.about__inner');
+  // let aboutToggle = document.querySelector('.about__toggle');
+  // let aboutInner = document.querySelector('.about__inner');
 
-  aboutToggle.addEventListener('click', () => {
-    aboutInner.classList.toggle('active');
-    if(aboutInner.classList.contains('active')){
-      aboutToggle.innerHTML = 'Показать меньше'
-    }else{
-      aboutToggle.innerHTML = 'Показать все'
+  // aboutToggle.addEventListener('click', () => {
+  //   aboutInner.classList.toggle('active');
+  //   if(aboutInner.classList.contains('active')){
+  //     aboutToggle.innerHTML = 'Показать меньше'
+  //   }else{
+  //     aboutToggle.innerHTML = 'Показать все'
 
-    }
-  })
+  //   }
+  // })
 
 
 
@@ -200,6 +199,99 @@ $(function () {
       }
     ]
   });
+
+
+  // select shop-filter
+
+
+  setTimeout(function() {
+    $('.shop-filter__select, .product-content__amount').styler();
+  }, 100)
+
+
+
+  
+  let menuHeading = document.querySelectorAll('.assortment__title');
+  console.log(menuHeading);
+  let dropdownMenu = document.querySelectorAll('.assortment__list');
+  console.log(dropdownMenu);
+
+  for (let i = 0; i < dropdownMenu.length; i++) {
+    menuHeading[i].addEventListener('click', () => {
+      for (let k = 0; k < dropdownMenu.length; k++) {
+        menuHeading[k].nextElementSibling.classList.toggle('active');
+      }
+    })
+  }
+
+
+  $('.slider-thumb').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    asNavFor: '.slider-big',
+    vertical: true,
+    draggable: false,
+
+  });
+
+  $('.slider-big').slick({
+    asNavFor: '.slider-thumb',
+    draggable: false,
+    arrows: false,
+  });
+
+  // $('.product-content__amount').styler();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 })

@@ -28,6 +28,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "gulp-cli": "^1.4.0",
+    "jquery-form-styler": "^2.0.2",
     "node-sass": "^6.0.1",
     "resolve-url": "^0.2.1",
     "save-dev": "0.0.1-security",

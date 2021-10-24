@@ -72,6 +72,18 @@
   }
 }
 
+@mixin pseudo{
+  content:"";
+  position: absolute;
+}
+@mixin pseudo-l-c{
+  content:"";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
 @mixin ptl{
   content: "";
   position: absolute;

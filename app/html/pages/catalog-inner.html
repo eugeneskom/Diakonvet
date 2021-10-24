@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ДИАКОН-ВЕТ</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <main class="catalog-inner">
+    @@include('../parts/_header.html')
+    <div class="container">
+      <div class="catalog-inner__wrapper d-flex jc-sb">
+        @@include('../parts/catalog/_catalog-sidebar.html')
+        @@include('../parts/catalog-inner/_catalog-product.html')
+        @@include('../parts/catalog-inner/_tabs.html')
+      </div>
+    </div>
+
+
+
+  </main>
+  @@include('../parts/_footer.html')
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

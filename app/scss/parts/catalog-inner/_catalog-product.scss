@@ -1,0 +1,274 @@
+.catalog-product {
+  width: 100%;
+
+  &__slider {
+    display: flex;
+    margin-right: 30px;
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 1.2;
+    color: $t-100;
+    margin-bottom: 17px;
+  }
+
+}
+
+.slider-thumb {
+  width: 50px;
+  margin-right: 12px;
+
+  &.slick-current &__item {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__img {
+    width: 31px;
+    height: 31px;
+    object-fit: contain;
+    object-position: center;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .slick-active {
+    border: 1px solid $t-10;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+
+  .slick-current {
+    border: 1px solid $link-hover;
+  }
+}
+
+.slider-big {
+
+  &__item {
+    padding: 66px;
+    border: 1px solid $t-10;
+    position: relative;
+  }
+
+  &__img {
+    width: 143px;
+    height: 143px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__category {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+  }
+
+  &__category-item {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__category-link {
+    padding: 2px 11px;
+    display: block;
+    font-size: 14px;
+    line-height: 1.35;
+    outline: transparent;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    &:focus {
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+
+    &:active {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    &--blue {
+      color: $t-title;
+      background: rgba(69, 98, 155, 0.13);
+      backdrop-filter: blur(4px);
+
+    }
+
+    &--green {
+      color: $link-hover;
+      background: rgba(94, 160, 71, 0.2);
+      backdrop-filter: blur(4px);
+
+    }
+  }
+
+  &__search {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(95, 95, 95, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: $search-hover;
+      backdrop-filter: blur(8px);
+    }
+
+    &:focus {
+      outline: transparent;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+
+    &:active {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+  }
+
+  &__search-icon {
+    width: 16px;
+    height: 16px;
+    fill: transparent;
+    stroke: $thirdly-bg;
+  }
+
+  .slick-list {
+    width: 276px;
+  }
+}
+
+.product-content {
+
+  &__list {
+    margin-right: 37px;
+  }
+
+  &__item {
+    display: flex;
+    font-size: 14px;
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__taxanomy {
+    flex: 0 0 110px;
+    color: $t-100;
+  }
+
+  &__name {
+    color: $t-product;
+  }
+
+  &__logos {
+    border: 1px solid $t-10;
+  }
+
+  &__logo-box {
+    padding: 10px 17px 6px;
+    width: 113px;
+    height: 54px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $t-10;
+    }
+  }
+
+  &__logo {
+    object-fit: contain;
+
+  }
+
+
+  &__price {
+    font-size: 47px;
+    line-height: 1.2;
+    @include o-bold;
+    color: $t-title;
+  }
+
+  &__availability {
+    position: relative;
+
+    &::before {
+      @include pseudo-l-c;
+      width: 13px;
+      height: 9px;
+      background-image: url('../images/icons/');
+    }
+  }
+
+  &__like {
+    width: 70px;
+    height: 70px;
+    background: rgba(95, 95, 95, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    width: 23px;
+    height: 20px;
+    fill: $link-hover;
+  }
+
+  &__amount {
+    // background-color: $bg-styler;
+    // display: block;
+    // width: 151px;
+    // height: 70px;
+    // border: none;
+    // border-radius: 50px;
+    // outline: transparent;
+    // &:focus{
+    //   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+
+    width: 100%;
+    padding: 14px 45px 18px;
+    border: none;
+    outline: none;
+    background: none;
+    font: 14 px Arial, sans-serif;
+    color: #333;
+  }
+
+}
+
+
+.jquery-number {
+  &__field {
+
+    position: relative;
+  }
+
+  &__spin {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.plus {
+      content: "+";
+      right: 0;
+    }
+
+    &.minus {
+      content: "-";
+      left: 0;
+    }
+  }
+}

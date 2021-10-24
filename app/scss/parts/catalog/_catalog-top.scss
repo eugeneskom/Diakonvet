@@ -8,9 +8,13 @@
     }
   }
 
+  &__title{
+    padding: 70px 0 55px;
+  }
+
   .cart{
-    position: relative;
-    top: 0;
-    right: 0;
+    position: static;
+    align-self: flex-end;
+    margin-bottom: 4px;
   }
 }
