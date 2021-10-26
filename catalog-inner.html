@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ДИАКОН-ВЕТ</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <main class="catalog-inner">
+    <header class="header">
+
+  <div class="header__top">
+    <button class="navtoggle">
+      <span class="navtoggle__span"></span>
+    </button>
+    <a href="/" class="logo">
+      <img src="images/logo.png" alt="Диакон вет" class="logo__img">
+      <p class="header__title">Всё для успешного ветеринарного бизнеса</p>
+    </a>
+    <div class="contact">
+
+      <div class="contact__inner">
+        <div class="contact__tel">
+          <a href="tel:74991300525" class="contact__link contact__link--phone">+7 (499) 130-05-25</a>
+          <a class="fancybox contact__link contact__link--order" data-fancybox href="#contact-popup">Заказать звонок</a>
+          <!--  -->
+          <div class="contact__popup" id="contact-popup" style="display: none;">
+            <form action="" class="form">
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Задать вопрос</legend>
+                <label class="form__label form__label--popup  form__label--asterisk">
+                  <input type="text" class="form__input" placeholder="Имя">
+                </label>
+                <label class="form__label form__label--popup  form__label--asterisk">
+                  <input type="text" class="form__input" placeholder="E-mail">
+                </label>
+                <label class="form__label form__label--popup  form__label--asterisk">
+                  <input type="text" class="form__input" placeholder="Телефон">
+                </label>
+                <label class="form__label form__label--popup">
+                  <textarea class="form__textarea" placeholder="Ваш вопрос"></textarea>
+                </label>
+
+                <div class="form__wrapper">
+                  <img src="images/captcha.png" class="form__captcha">
+                  <button class="btn form__btn" type="submit">Отправить</button>
+                </div>
+                <div class="form__check">
+                  <label class="form__label-check d-flex">
+                    <input type="checkbox" class="form__checkinput" checked="checked">
+                    <span class="form__checkbox"></span>
+                  </label>
+                  <div class="form__confirmation">
+                    <p>
+                      Нажимая кнопку «Отправить», я даю <a class="form__data" href="#">свое согласие на обработку моих
+                        персональных данных</a>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                      персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+                      данных
+                    </p>
+                  </div>
+
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <!--  -->
+        </div>
+        <a href="mailto:info@diakonvet.ru" class="contact__link contact__link--email">info@diakonvet.ru</a>
+      </div>
+    </div>
+
+    <div class="account">
+      <a class="account__item account__item--user" href="#" style="background-image: url('images/icons/user.svg');">
+        <span class="sr-only">Зайти в свой кабинет</span>
+      </a>
+      <a class="account__item account__item--cart" href="#" style="background-image: url('images/icons/cart.svg');">
+        <span class="sr-only">Открыть корзину</span>
+        <span class="account__count">2</span>
+      </a>
+
+      <form class="search-form" action="">
+        <button class="search-form__btn" type="submit">
+          <div class="search-form__img" style="background-image: url('images/icons/search.svg');"></div>
+        </button>
+        <input type="search" class="search-form__input">
+      </form>
+    </div>
+  </div>
+
+
+  <div class="header__bottom">
+    <div class="container">
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Компания</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Сервис</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Акции</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Доставка и оплата</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Дилерам</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Новости</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Статьи</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Видео</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <div class="catalog-inner__wrapper d-flex jc-sb">
+        <div class="catalog__sidebar">
+  <ul class="assortment">
+    
+    <li class="assortment__category">
+      <h2 class="assortment__title assortment__title--equipment"> Оборудование</h2>
+      <ul class="assortment__list active">
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Ветеринарное оборудование</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Иммуно-хроматографические анализаторы</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Электрокардиографы ветеринарные</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Биохимические анализаторы</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Гематологические 
+            анализаторы</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Коагулометры</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Экспресс-диагностика</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Терапия и хирургия</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Функциональная диагностика</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Рентген аппараты 
+            для ветеринарии</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Центрифуги</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Дозаторы</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Биологические микроскопы</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Разное</a>
+        </li>
+      </ul>
+    </li>
+    <li class="assortment__category">
+      <h2 class="assortment__title assortment__title--reagents"> Реагенты</h2>
+      <ul class="assortment__list">
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Ветеринарное оборудование</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Иммуно-хроматографические анализаторы</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Электрокардиографы ветеринарные</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Биохимические анализаторы</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Гематологические 
+            анализаторы</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Коагулометры</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Экспресс-диагностика</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Терапия и хирургия</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Функциональная диагностика</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Рентген аппараты 
+            для ветеринарии</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Центрифуги</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Дозаторы</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Биологические микроскопы</a>
+        </li>
+        <li class="assortment__subcategory">
+          <a href="#" class="assortment__link">Разное</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+        <section class="catalog-product d-flex">
+  <div class="catalog-product__slider">
+    <div class="slider-thumb">
+      <div class="slider-thumb__item">
+        <img class="slider-thumb__img" src="images/products/slider/slide-1.png">
+      </div>
+      <div class="slider-thumb__item">
+        <img class="slider-thumb__img" src="images/products/slider/slide-2.png">
+      </div>
+    </div>
+    <div class="slider-big">
+      <div class="slider-big__item">
+        <img src="images/products/slider/slide-1.png">
+        <ul class="slider-big__category">
+          <li class="slider-big__category-item">
+            <a href="#" class="slider-big__category-link slider-big__category-link--blue">Trade-in</a>
+          </li>
+          <li class="slider-big__category-item">
+            <a href="#" class="slider-big__category-link slider-big__category-link--green">Хит продаж</a>
+          </li>
+        </ul>
+        <a href="#" class="slider-big__search">
+          <svg class="slider-big__search-icon">
+            <use xlink:href="sprite.svg#search"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="slider-big__item">
+        <img src="images/products/slider/slide-2.png">
+        <ul class="slider-big__category">
+          <li class="slider-big__category-item">
+            <a href="#" class="slider-big__category-link slider-big__category-link--blue">Trade-in</a>
+          </li slider-big__category--blue>
+          <li class="slider-big__category-item">
+            <a href="#" class="slider-big__category-link slider-big__category-link--green">Хит продаж</a>
+          </li>
+        </ul>
+        <a href="#" class="slider-big__search">-link
+          <svg class="slider-big__search-icon">
+            <use xlink:href="sprite.svg#search"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="catalog-product__content product-content">
+    <h2 class="catalog-product__title">Автоматический гематологический анализатор DF50 Vet</h2>
+    <div class="product-content__about d-flex jc-sb">
+      <ul class="product-content__list">
+        <li class="product-content__item">
+          <div class="product-content__taxanomy">Категории:</div>
+          <div class="product-content__name">Автоматические анализаторы, Гематологические анализаторы</div>
+        </li>
+        <li class="product-content__item">
+          <div class="product-content__taxanomy">Бренд: </div>
+          <div class="product-content__name">Dymind</div>
+
+        </li>
+      </ul>
+
+      <ul class="product-content__logos">
+
+        <li class="product-content__logo-box">
+          <img src="images/catalog/dymind.png" alt="Dymind" class="product-content__logo">
+        </li>
+        <li class="product-content__logo-box">
+          <img src="images/catalog/warranty.png" alt="гаррантия 24 месяца" class="product-content__logo">
+        </li>
+      </ul>
+    </div>
+
+    <div class="product-content__info d-flex jc-sb ai-c">
+      <div class="product-content__price">690 000 <span>₽</span></div>
+      <div class="product-content__availability">В наличии</div>
+      <a class="product-content__question" href="#">Задать вопрос</a>
+    </div>
+    <form class="product-content__form d-flex ai-c jc-sb">
+      <input class="product-content__amount" type="number" value="1">
+      <button class=" btn product-content__add" href="#">Добавить в корзину</button>
+      <a class="product-content__like" href="#">
+        <svg class="product-content__icon">
+          <use xlink:href="sprite.svg#heart"></use>
+        </svg>
+      </a>
+    </form>
+  </div>
+</section>
+<div class="tabs">
+  <div class="tabs__buttons">
+    <button class="tabs__btn">Описание</button>
+    <button class="tabs__btn">Характеристики</button>
+    <button class="tabs__btn">Доставка и оплата</button>
+    <button class="tabs__btn">Пуско-наладка</button>
+    <button class="tabs__btn">Отзывы</button>
+  </div>
+  <div class="tabs__content">
+    <div class="tabs__page">
+      1
+    </div>
+    <div class="tabs__page">
+      2
+    </div>
+    <div class="tabs__page">
+      3
+    </div>
+    <div class="tabs__page">
+      4
+    </div>
+    <div class="tabs__page">
+      5
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+
+
+  </main>
+  <footer class="footer">
+  <div class="container">
+
+    <div class="footer__top">
+      <div class="footer__col info">
+        <img class="footer__logo " src="images/footer/footer-logo.png" alt="OOO “ДИАКОН-ВЕТ”">
+        <h2 class="info__title"> ооо "Диакон-вет"</h2>
+        <a href="#" class="info__yandex-link">
+
+          <img class="info__yandex" src="images/footer/yandex.png" alt="Статистика Яндекс">
+        </a>
+        <div class="info__about">
+          <p>ООО «ДИАКОН-ВЕТ»: ветеринарное оборудование и приборы, диагностические реагенты для лабораторий и клиник
+          </p>
+          <p>
+            Компания осуществляет свою работу по упрощенной системе налогообложения (УСН) в соответствии со ст. 346.12
+            НК
+            РФ
+          </p>
+        </div>
+
+        <a href="#" class="info__link info__policy">Политика обработки персональных данных</a>
+        <a href="#" class="info__link info__corruption">Положение об антикоррупционной политике</a>
+      </div>
+      <div class="footer__col reagents">
+        <h2 class="footer__title">Реагенты</h2>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#" class="footer__link">Реагенты для биохимических анализаторов</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Диагностические профили</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Реагенты ДиаВетТест</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Реагенты BSBE</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Реагенты Skyla</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Контрольные материалы</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Реагенты для гематологических анализаторов</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Dymind</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">URIT</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col equipment">
+        <h2 class="footer__title">Ветоборудование</h2>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#" class="footer__link">
+              Биохимические анализаторы</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Гематологические анализаторы</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Мочевая химия</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Анализаторы электролитов</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Функциональная диагностика</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">
+              Экспресс-диагностика</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Общее лабораторное оборудование</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Коагуляторы</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Центрифуги</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Дозаторы</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Ветлаборатория под ключ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__col company">
+        <h2 class="footer__title">Компания</h2>
+        <ul class="company__list">
+          <li class="company__item">
+            <a href="#" class="company__link">Статьи</a>
+          </li>
+          <li class="company__item">
+            <a href="#" class="company__link">Сервис</a>
+          </li>
+          <li class="company__item">
+            <a href="#" class="company__link">Акции</a>
+          </li>
+          <li class="company__item">
+            <a href="#" class="company__link">Доставка и оплата</a>
+          </li>
+          <li class="company__item">
+            <a href="#" class="company__link">Дилерам</a>
+          </li>
+          <li class="company__item">
+            <a href="#" class="company__link">Новости</a>
+          </li>
+          <li class="company__item">
+            <a href="#" class="company__link">Видео</a>
+          </li>
+          <li class="company__item">
+            <a href="#" class="company__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col contacts">
+        <a href="tel:34993722462" class="contacts__phone">+7 (499) 372-24-62</a>
+        <a href="tel:34991300525" class="contacts__phone">+7 (499) 130-05-25</a>
+        <a href="mailto:info@diakonvet.ru" class="contacts__email contacts__social">info@diakonvet.ru</a>
+        <a href="instagram.com" class="contacts__insta contacts__social">@diakonvet
+        </a>
+        <address class="contacts__address">
+          Московская область, г. Пущино, улица Грузовая, 1А, 142290
+        </address>
+        <a class="btn contacts__consultation"  data-fancybox href="#footer-popup">Заказать консультацию</a>
+        <div class="contact__popup" id="footer-popup" style="display: none;">
+          <form action="" class="form">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Заказать консультацию</legend>
+              <label class="form__label form__label--popup  form__label--asterisk">
+                <input type="text" class="form__input" placeholder="Имя">
+              </label>
+              <label class="form__label form__label--popup  form__label--asterisk">
+                <input type="text" class="form__input" placeholder="E-mail">
+              </label>
+              <label class="form__label form__label--popup  form__label--asterisk">
+                <input type="text" class="form__input" placeholder="Телефон">
+              </label>
+              <label class="form__label form__label--popup">
+                <textarea class="form__textarea" placeholder="Ваш вопрос"></textarea>
+              </label>
+
+              <div class="form__wrapper">
+                <img src="images/captcha.png" class="form__captcha">
+                <button class="btn form__btn" type="submit">Отправить</button>
+              </div>
+              <div class="form__check">
+                <label class="form__label-check d-flex">
+                  <input type="checkbox" class="form__checkinput" checked="checked">
+                  <span class="form__checkbox"></span>
+                </label>
+                <div class="form__confirmation">
+                  <p>
+                    Нажимая кнопку «Отправить», я даю <a class="form__data" href="#">свое согласие на обработку моих
+                      персональных данных</a>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                    персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+                    данных
+                  </p>
+                </div>
+
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container d-flex jc-sb ai-c">
+      <div class="footer__copy">2014-2021 Компания ООО “ДИАКОН-ВЕТ” Все права защищены</div>
+      <a href="#" class="footer__planets-link">
+        <img class="footer__planets" src="images/footer/planets.svg" alt="">
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
