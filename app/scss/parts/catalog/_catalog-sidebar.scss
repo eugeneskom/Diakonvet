@@ -66,15 +66,16 @@
 
   }
 
-  &__list{
+  &__list {
     display: none;
-    &.active{
+
+    &.active {
       display: block;
     }
   }
 
   &__subcategory {
-    padding: 3px 16px;
+    padding: 3px 0;
     min-height: 59px;
     display: flex;
     align-items: center;
@@ -88,10 +89,22 @@
     font-size: 15px;
     line-height: 1.2;
     transition: color 0.2s ease-in;
-    padding: 6px 0;
+    padding: 6px 0 6px 16px;
+    display: block;
+    width: 100%;
 
-    &:hover{
+    &:hover {
       color: $link-hover;
+    }
+
+    &:focus {
+      outline: transparent;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+
+    &:active {
+      color: $t-main;
+      box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     }
   }
 

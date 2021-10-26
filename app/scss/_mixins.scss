@@ -58,40 +58,59 @@
   font-family: 'Roboto-Regular', sans-serif;
 }
 
-@mixin cards-wrapper{
+@mixin cards-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  @include r($r-lg){
+
+  @include r($r-lg) {
     justify-content: space-around;
   }
-  @include r($r-md){
+
+  @include r($r-md) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 }
 
-@mixin pseudo{
-  content:"";
+@mixin pseudo {
+  content: "";
   position: absolute;
 }
-@mixin pseudo-l-c{
-  content:"";
+
+@mixin pseudo-l-c {
+  content: "";
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
 }
 
-@mixin ptl{
+@mixin ptl {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
 }
 
-@mixin bgcover{
+@mixin p-center {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin p-c-r {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+@mixin bgcover {
   content: "";
   position: absolute;
   top: 0;
@@ -100,7 +119,13 @@
   left: 0;
 }
 
-@mixin no-btn{
+@mixin img-cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin no-btn {
   background-color: transparent;
   border: none;
   outline: transparent;

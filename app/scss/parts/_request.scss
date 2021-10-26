@@ -38,9 +38,11 @@
     @include o-bold;
     margin-bottom: 34px;
 
-    span {
-      color: $thirdly-bg;
-    }
+  }
+
+  &__span {
+    text-transform: uppercase;
+    color: $thirdly-bg;
   }
 
   &__text {
@@ -80,111 +82,12 @@
   &__text {
     line-height: 1.5;
     margin-bottom: 26px;
-    @include r($r-md){
+
+    @include r($r-md) {
       font-size: 14px;
       margin-bottom: 17px;
     }
   }
 
-  &__input {
-    display: block;
-    width: 100%;
-    position: relative;
-    border: 1px solid $t-10;
-    padding: 12px 13px 11px 18px;
 
-    &:not(:last-child) {
-      margin-bottom: 9px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      width: 8px;
-      height: 18px;
-      background-image: url(../images/icons/asterisk.svg);
-    }
-  }
-
-  &__wrapper {
-
-    @include rmin($r-md) {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-  }
-
-  &__captcha {
-    margin-bottom: 22px;
-  }
-
-  &__btn {
-    margin-bottom: 22px;
-
-    @include r($r-md) {
-      width: 100%;
-    }
-  }
-
-  &__check {
-    display: flex;
-  }
-
-  &__label {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  &__checkbox {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-
-    &:checked {
-      .form-block__checkmark {
-        background-color: #2196F3;
-      }
-    }
-
-  }
-
-  &__checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-
-    &:after {
-      content: "";
-      position: absolute;
-      display: none;
-      left: 9px;
-      top: 5px;
-      width: 5px;
-      height: 10px;
-      border: solid rgb(184, 26, 26);
-      border-width: 0 3px 3px 0;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-  }
-
-  &__confirmation {
-    font-size: 9px;
-    line-height: 1.2;
-    padding-left: 30px;
-  }
-
-  &__data {
-    color: $thirdly-bg;
-  }
 }

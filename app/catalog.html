@@ -12,47 +12,86 @@
 <body>
   <main class="catalog">
 
-    
-<header class="header">
+    <header class="header">
 
-    <div class="header__top">
-      <button class="navtoggle">
-        <span class="navtoggle__span"></span>
-      </button>
-      <a href="/" class="logo">
-        <img src="images/logo.png" alt="Диакон вет" class="logo__img">
-        <p class="header__title">Всё для успешного ветеринарного бизнеса</p>
-      </a>
-      <div class="contact">
+  <div class="header__top">
+    <button class="navtoggle">
+      <span class="navtoggle__span"></span>
+    </button>
+    <a href="/" class="logo">
+      <img src="images/logo.png" alt="Диакон вет" class="logo__img">
+      <p class="header__title">Всё для успешного ветеринарного бизнеса</p>
+    </a>
+    <div class="contact">
 
-        <div class="contact__inner">
-          <div class="contact__tel">
-            <a href="tel:74991300525" class="contact__link contact__link--phone">+7 (499) 130-05-25</a>
-            <a href="#" class="contact__link contact__link--order">Заказать звонок</a>
+      <div class="contact__inner">
+        <div class="contact__tel">
+          <a href="tel:74991300525" class="contact__link contact__link--phone">+7 (499) 130-05-25</a>
+          <a class="fancybox contact__link contact__link--order" data-fancybox href="#contact-popup">Заказать звонок</a>
+          <!--  -->
+          <div class="contact__popup" id="contact-popup" style="display: none;">
+            <form action="" class="form">
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Задать вопрос</legend>
+                <label class="form__label form__label--popup  form__label--asterisk">
+                  <input type="text" class="form__input" placeholder="Имя">
+                </label>
+                <label class="form__label form__label--popup  form__label--asterisk">
+                  <input type="text" class="form__input" placeholder="E-mail">
+                </label>
+                <label class="form__label form__label--popup  form__label--asterisk">
+                  <input type="text" class="form__input" placeholder="Телефон">
+                </label>
+                <label class="form__label form__label--popup">
+                  <textarea class="form__textarea" placeholder="Ваш вопрос"></textarea>
+                </label>
+
+                <div class="form__wrapper">
+                  <img src="images/captcha.png" class="form__captcha">
+                  <button class="btn form__btn" type="submit">Отправить</button>
+                </div>
+                <div class="form__check">
+                  <label class="form__label-check d-flex">
+                    <input type="checkbox" class="form__checkinput" checked="checked">
+                    <span class="form__checkbox"></span>
+                  </label>
+                  <div class="form__confirmation">
+                    <p>
+                      Нажимая кнопку «Отправить», я даю <a class="form__data" href="#">свое согласие на обработку моих
+                        персональных данных</a>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                      персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+                      данных
+                    </p>
+                  </div>
+
+                </div>
+              </fieldset>
+            </form>
           </div>
-          <a href="mailto:info@diakonvet.ru" class="contact__link contact__link--email">info@diakonvet.ru</a>
+
+          <!--  -->
         </div>
-      </div>
-
-      <div class="account">
-        <a class="account__item account__item--user" href="#"
-          style="background-image: url('images/icons/user.svg');">
-          <span class="sr-only">Зайти в свой кабинет</span>
-        </a>
-        <a class="account__item account__item--cart" href="#"
-          style="background-image: url('images/icons/cart.svg');">
-          <span class="sr-only">Открыть корзину</span>
-          <span class="account__count">2</span>
-        </a>
-
-        <form class="search-form" action="">
-          <button class="search-form__btn" type="submit">
-            <div class="search-form__img" style="background-image: url('images/icons/search.svg');"></div>
-          </button>
-          <input type="search" class="search-form__input">
-        </form>
+        <a href="mailto:info@diakonvet.ru" class="contact__link contact__link--email">info@diakonvet.ru</a>
       </div>
     </div>
+
+    <div class="account">
+      <a class="account__item account__item--user" href="#" style="background-image: url('images/icons/user.svg');">
+        <span class="sr-only">Зайти в свой кабинет</span>
+      </a>
+      <a class="account__item account__item--cart" href="#" style="background-image: url('images/icons/cart.svg');">
+        <span class="sr-only">Открыть корзину</span>
+        <span class="account__count">2</span>
+      </a>
+
+      <form class="search-form" action="">
+        <button class="search-form__btn" type="submit">
+          <div class="search-form__img" style="background-image: url('images/icons/search.svg');"></div>
+        </button>
+        <input type="search" class="search-form__input">
+      </form>
+    </div>
+  </div>
 
 
   <div class="header__bottom">
@@ -77,9 +116,14 @@
 </header>
     <div class="d-flex jc-sb catalog__top">
   <h1 class="catalog__title">Ветеринарное оборудование</h1>
-  <a class="cart" href="#">
+  <!-- <a class="cart" href="#">
     <img class="cart__img" src="images/icons/cart.svg" alt="Cart">
-    <span class="cart__count">2</span>
+    <span class="cart__count">2</span> -->
+
+    <a class="@@hero cart" href="#">
+  <img class="cart__img" src="images/icons/cart.svg" alt="Cart">
+  <span class="cart__count">2</span>
+</a>
   </a>
 </div>
     <div class="container d-flex jc-sb">
@@ -190,7 +234,7 @@
 
   <div class="shop-filter d-flex jc-sb ai-c">
     <form action="" class="shop-filter__form d-flex">
-      <label class="shop-filter__label">
+      <label class="shop-filter__label d-flex ai-c">
         Сортировать по:
         <select class="shop-filter__select" id="">
           <option value="" class="shop-filter__option">новизне</option>
@@ -210,15 +254,24 @@
   <div class="shop__products d-flex fw-w">
     <article class="product shop__product">
   <div class="product__top">
-    <img class="product__thumb" src="images/products/product-1.png"
-      alt="Автоматический гематологический анализатор DF50 Vet">
+    <a class="product__link" href="#">
+      <img class="product__thumb" src="images/products/product-1.png"
+        alt="Автоматический гематологический анализатор DF50 Vet">
+    </a>
     <a class="product__like" href="#">
-      <span class="product__heart" style="background-image: url(../images/icons/heart-hollow.svg);"></span>
+      <svg class="product__heart">
+  <use xlink:href="sprite.svg#heart"></use>
+</svg>
+
     </a>
   </div>
   <div class="product__body">
     <span class="product__category">Автоматические анализаторые</span>
-    <h2 class="product__title">Автоматический гематологический анализатор DF50 Vet</h2>
+    <h2 class="product__title">
+      <a class="product__link" href="#">
+        Автоматический гематологический анализатор DF50 Vet
+      </a>
+    </h2>
     <div class="product__price">690 000 <span>₽</span></div>
     <div class="product__bottom d-flex jc-sb ai-c">
       <span class="product__present product__present--true">В наличии</span>
@@ -230,15 +283,24 @@
 </article>
     <article class="product shop__product">
   <div class="product__top">
-    <img class="product__thumb" src="images/products/product-2.png"
-      alt="Автоматический гематологический анализатор DF50 Vet">
+    <a class="product__link" href="#">
+      <img class="product__thumb" src="images/products/product-2.png"
+        alt="Автоматический гематологический анализатор DF50 Vet">
+    </a>
     <a class="product__like" href="#">
-      <span class="product__heart" style="background-image: url(../images/icons/heart-hollow.svg);"></span>
+      <svg class="product__heart">
+  <use xlink:href="sprite.svg#heart"></use>
+</svg>
+
     </a>
   </div>
   <div class="product__body">
     <span class="product__category">Автоматические анализаторые</span>
-    <h2 class="product__title">Автоматический гематологический анализатор DF50 Vet</h2>
+    <h2 class="product__title">
+      <a class="product__link" href="#">
+        Автоматический гематологический анализатор DF50 Vet
+      </a>
+    </h2>
     <div class="product__price">690 000 <span>₽</span></div>
     <div class="product__bottom d-flex jc-sb ai-c">
       <span class="product__present product__present--false">Нет в наличии</span>
@@ -250,15 +312,24 @@
 </article>
     <article class="product shop__product">
   <div class="product__top">
-    <img class="product__thumb" src="images/products/product-3.png"
-      alt="Автоматический гематологический анализатор DF50 Vet">
+    <a class="product__link" href="#">
+      <img class="product__thumb" src="images/products/product-3.png"
+        alt="Автоматический гематологический анализатор DF50 Vet">
+    </a>
     <a class="product__like" href="#">
-      <span class="product__heart" style="background-image: url(../images/icons/heart-hollow.svg);"></span>
+      <svg class="product__heart">
+  <use xlink:href="sprite.svg#heart"></use>
+</svg>
+
     </a>
   </div>
   <div class="product__body">
     <span class="product__category">Автоматические анализаторые</span>
-    <h2 class="product__title">Автоматический гематологический анализатор DF50 Vet</h2>
+    <h2 class="product__title">
+      <a class="product__link" href="#">
+        Автоматический гематологический анализатор DF50 Vet
+      </a>
+    </h2>
     <div class="product__price">690 000 <span>₽</span></div>
     <div class="product__bottom d-flex jc-sb ai-c">
       <span class="product__present product__present--true">В наличии</span>
@@ -270,15 +341,24 @@
 </article>
     <article class="product shop__product">
   <div class="product__top">
-    <img class="product__thumb" src="images/products/product-4.png"
-      alt="Автоматический гематологический анализатор DF50 Vet">
+    <a class="product__link" href="#">
+      <img class="product__thumb" src="images/products/product-4.png"
+        alt="Автоматический гематологический анализатор DF50 Vet">
+    </a>
     <a class="product__like" href="#">
-      <span class="product__heart" style="background-image: url(../images/icons/heart-hollow.svg);"></span>
+      <svg class="product__heart">
+  <use xlink:href="sprite.svg#heart"></use>
+</svg>
+
     </a>
   </div>
   <div class="product__body">
     <span class="product__category">Автоматические анализаторые</span>
-    <h2 class="product__title">Ветеринарный монитор пациента OSBC-12</h2>
+    <h2 class="product__title">
+      <a class="product__link" href="#">
+        Ветеринарный монитор пациента OSBC-12
+      </a>
+    </h2>
     <div class="product__price">80 000 <span>₽</span> - 160 000 <span>₽</span> </div>
     <div class="product__bottom d-flex jc-sb ai-c">
       <span class="product__present product__present--true">В наличии</span>
@@ -290,15 +370,24 @@
 </article>
     <article class="product shop__product">
   <div class="product__top">
-    <img class="product__thumb" src="images/products/product-5.png"
-      alt="Автоматический гематологический анализатор DF50 Vet">
+    <a class="product__link" href="#">
+      <img class="product__thumb" src="images/products/product-5.png"
+        alt="Автоматический гематологический анализатор DF50 Vet">
+    </a>
     <a class="product__like" href="#">
-      <span class="product__heart" style="background-image: url(../images/icons/heart-hollow.svg);"></span>
+      <svg class="product__heart">
+  <use xlink:href="sprite.svg#heart"></use>
+</svg>
+
     </a>
   </div>
   <div class="product__body">
     <span class="product__category">Автоматические анализаторые</span>
-    <h2 class="product__title">Автоматический гематологический анализатор DF50 Vet</h2>
+    <h2 class="product__title">
+      <a class="product__link" href="#">
+        Автоматический гематологический анализатор DF50 Vet
+      </a>
+    </h2>
     <div class="product__price">690 000 <span>₽</span></div>
     <div class="product__bottom d-flex jc-sb ai-c">
       <span class="product__present product__present--true">В наличии</span>
@@ -310,15 +399,24 @@
 </article>
     <article class="product shop__product">
   <div class="product__top">
-    <img class="product__thumb" src="images/products/product-6.png"
-      alt="Автоматический гематологический анализатор DF50 Vet">
+    <a class="product__link" href="#">
+      <img class="product__thumb" src="images/products/product-6.png"
+        alt="Автоматический гематологический анализатор DF50 Vet">
+    </a>
     <a class="product__like" href="#">
-      <span class="product__heart" style="background-image: url(../images/icons/heart-hollow.svg);"></span>
+      <svg class="product__heart">
+  <use xlink:href="sprite.svg#heart"></use>
+</svg>
+
     </a>
   </div>
   <div class="product__body">
     <span class="product__category">Автоматические анализаторые</span>
-    <h2 class="product__title">Автоматический гематологический анализатор DF50 Vet</h2>
+    <h2 class="product__title">
+      <a class="product__link" href="#">
+        Автоматический гематологический анализатор DF50 Vet
+      </a>
+    </h2>
     <div class="product__price">690 000 <span>₽</span></div>
     <div class="product__bottom d-flex jc-sb ai-c">
       <span class="product__present product__present--true">В наличии</span>
@@ -330,15 +428,24 @@
 </article>
     <article class="product shop__product">
   <div class="product__top">
-    <img class="product__thumb" src="images/products/product-7.png"
-      alt="Автоматический гематологический анализатор DF50 Vet">
+    <a class="product__link" href="#">
+      <img class="product__thumb" src="images/products/product-7.png"
+        alt="Автоматический гематологический анализатор DF50 Vet">
+    </a>
     <a class="product__like" href="#">
-      <span class="product__heart" style="background-image: url(../images/icons/heart-hollow.svg);"></span>
+      <svg class="product__heart">
+  <use xlink:href="sprite.svg#heart"></use>
+</svg>
+
     </a>
   </div>
   <div class="product__body">
     <span class="product__category">Автоматические анализаторые</span>
-    <h2 class="product__title">Автоматический гематологический анализатор DF50 Vet</h2>
+    <h2 class="product__title">
+      <a class="product__link" href="#">
+        Автоматический гематологический анализатор DF50 Vet
+      </a>
+    </h2>
     <div class="product__price">690 000 <span>₽</span></div>
     <div class="product__bottom d-flex jc-sb ai-c">
       <span class="product__present product__present--true">В наличии</span>
@@ -350,15 +457,24 @@
 </article>
     <article class="product shop__product">
   <div class="product__top">
-    <img class="product__thumb" src="images/products/product-2.png"
-      alt="Автоматический гематологический анализатор DF50 Vet">
+    <a class="product__link" href="#">
+      <img class="product__thumb" src="images/products/product-2.png"
+        alt="Автоматический гематологический анализатор DF50 Vet">
+    </a>
     <a class="product__like" href="#">
-      <span class="product__heart" style="background-image: url(../images/icons/heart-hollow.svg);"></span>
+      <svg class="product__heart">
+  <use xlink:href="sprite.svg#heart"></use>
+</svg>
+
     </a>
   </div>
   <div class="product__body">
     <span class="product__category">Автоматические анализаторые</span>
-    <h2 class="product__title">Автоматический гематологический анализатор DF50 Vet</h2>
+    <h2 class="product__title">
+      <a class="product__link" href="#">
+        Автоматический гематологический анализатор DF50 Vet
+      </a>
+    </h2>
     <div class="product__price">690 000 <span>₽</span></div>
     <div class="product__bottom d-flex jc-sb ai-c">
       <span class="product__present product__present--true">В наличии</span>
@@ -370,15 +486,24 @@
 </article>
     <article class="product shop__product">
   <div class="product__top">
-    <img class="product__thumb" src="images/products/product-3.png"
-      alt="Автоматический гематологический анализатор DF50 Vet">
+    <a class="product__link" href="#">
+      <img class="product__thumb" src="images/products/product-3.png"
+        alt="Автоматический гематологический анализатор DF50 Vet">
+    </a>
     <a class="product__like" href="#">
-      <span class="product__heart" style="background-image: url(../images/icons/heart-hollow.svg);"></span>
+      <svg class="product__heart">
+  <use xlink:href="sprite.svg#heart"></use>
+</svg>
+
     </a>
   </div>
   <div class="product__body">
     <span class="product__category">Автоматические анализаторые</span>
-    <h2 class="product__title">Автоматический гематологический анализатор DF50 Vet</h2>
+    <h2 class="product__title">
+      <a class="product__link" href="#">
+        Автоматический гематологический анализатор DF50 Vet
+      </a>
+    </h2>
     <div class="product__price">690 000 <span>₽</span></div>
     <div class="product__bottom d-flex jc-sb ai-c">
       <span class="product__present product__present--true">В наличии</span>
@@ -544,7 +669,46 @@
         <address class="contacts__address">
           Московская область, г. Пущино, улица Грузовая, 1А, 142290
         </address>
-        <a href="#" class="btn contacts__consultation">Заказать консультацию</a>
+        <a class="btn contacts__consultation"  data-fancybox href="#footer-popup">Заказать консультацию</a>
+        <div class="contact__popup" id="footer-popup" style="display: none;">
+          <form action="" class="form">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Заказать консультацию</legend>
+              <label class="form__label form__label--popup  form__label--asterisk">
+                <input type="text" class="form__input" placeholder="Имя">
+              </label>
+              <label class="form__label form__label--popup  form__label--asterisk">
+                <input type="text" class="form__input" placeholder="E-mail">
+              </label>
+              <label class="form__label form__label--popup  form__label--asterisk">
+                <input type="text" class="form__input" placeholder="Телефон">
+              </label>
+              <label class="form__label form__label--popup">
+                <textarea class="form__textarea" placeholder="Ваш вопрос"></textarea>
+              </label>
+
+              <div class="form__wrapper">
+                <img src="images/captcha.png" class="form__captcha">
+                <button class="btn form__btn" type="submit">Отправить</button>
+              </div>
+              <div class="form__check">
+                <label class="form__label-check d-flex">
+                  <input type="checkbox" class="form__checkinput" checked="checked">
+                  <span class="form__checkbox"></span>
+                </label>
+                <div class="form__confirmation">
+                  <p>
+                    Нажимая кнопку «Отправить», я даю <a class="form__data" href="#">свое согласие на обработку моих
+                      персональных данных</a>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                    персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+                    данных
+                  </p>
+                </div>
+
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,173 @@
+.form {
+  &__fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  &__legend {
+    border: none;
+    padding: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    color: $t-title;
+    font-size: 30px;
+    margin-bottom: 36px;
+    text-align: center;
+    @include o-bold;
+  }
+
+  &__label {
+    display: block;
+    position: relative;
+
+    &--asterisk {
+      &::after {
+        @include p-c-r;
+        @include img-cover;
+        width: 8px;
+        height: 8px;
+        background-image: url('../images/icons/asterisk.svg');
+        right: 11px;
+      }
+    }
+
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+
+    &--popup {
+      &:not(:last-child) {
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  &__input {}
+
+  &__input,
+  &__textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid $t-10;
+    padding: 12px 13px 11px 18px;
+    font-size: 14px;
+    color: $t_input;
+
+    &:hover {
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+
+    &:active {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    &:focus {
+      outline: transparent;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+
+  }
+
+  &__textarea {
+    resize: none;
+    position: static;
+    height: 97px;
+  }
+
+  &__wrapper {
+
+    @include rmin($r-md) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__captcha {
+    margin-bottom: 22px;
+  }
+
+  &__btn {
+    margin-bottom: 22px;
+
+    @include r($r-md) {
+      width: 100%;
+    }
+  }
+
+  &__check {
+    display: flex;
+  }
+
+  &__label-check {
+    cursor: pointer;
+    position: relative;
+
+  }
+
+  &__checkinput {
+    position: absolute;
+    appearance: none;
+
+    &:checked+.form__checkbox {
+
+      &:after {
+        @include p-center;
+        width: 8px;
+        height: 7px;
+        background-image: url('../images/icons/checkmark.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+    }
+
+    &:hover+.form__checkbox {
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    &:active+.form__checkbox {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    &:focus+.form__checkbox {
+      outline: transparent;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid $checkbox;
+    display: block;
+    height: 15px;
+    width: 15px;
+  }
+
+  &__confirmation {
+    font-size: 9px;
+    line-height: 1.2;
+    padding-left: 30px;
+  }
+
+  &__data {
+    color: $thirdly-bg;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    &:active {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    &:focus {
+      outline: transparent;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+  }
+
+}

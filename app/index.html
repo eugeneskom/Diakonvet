@@ -12,47 +12,86 @@
 <body>
 <main class="main">
 
-  
-<header class="header">
+  <header class="header">
 
-    <div class="header__top">
-      <button class="navtoggle">
-        <span class="navtoggle__span"></span>
-      </button>
-      <a href="/" class="logo">
-        <img src="images/logo.png" alt="Диакон вет" class="logo__img">
-        <p class="header__title">Всё для успешного ветеринарного бизнеса</p>
-      </a>
-      <div class="contact">
+  <div class="header__top">
+    <button class="navtoggle">
+      <span class="navtoggle__span"></span>
+    </button>
+    <a href="/" class="logo">
+      <img src="images/logo.png" alt="Диакон вет" class="logo__img">
+      <p class="header__title">Всё для успешного ветеринарного бизнеса</p>
+    </a>
+    <div class="contact">
 
-        <div class="contact__inner">
-          <div class="contact__tel">
-            <a href="tel:74991300525" class="contact__link contact__link--phone">+7 (499) 130-05-25</a>
-            <a href="#" class="contact__link contact__link--order">Заказать звонок</a>
+      <div class="contact__inner">
+        <div class="contact__tel">
+          <a href="tel:74991300525" class="contact__link contact__link--phone">+7 (499) 130-05-25</a>
+          <a class="fancybox contact__link contact__link--order" data-fancybox href="#contact-popup">Заказать звонок</a>
+          <!--  -->
+          <div class="contact__popup" id="contact-popup" style="display: none;">
+            <form action="" class="form">
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Задать вопрос</legend>
+                <label class="form__label form__label--popup  form__label--asterisk">
+                  <input type="text" class="form__input" placeholder="Имя">
+                </label>
+                <label class="form__label form__label--popup  form__label--asterisk">
+                  <input type="text" class="form__input" placeholder="E-mail">
+                </label>
+                <label class="form__label form__label--popup  form__label--asterisk">
+                  <input type="text" class="form__input" placeholder="Телефон">
+                </label>
+                <label class="form__label form__label--popup">
+                  <textarea class="form__textarea" placeholder="Ваш вопрос"></textarea>
+                </label>
+
+                <div class="form__wrapper">
+                  <img src="images/captcha.png" class="form__captcha">
+                  <button class="btn form__btn" type="submit">Отправить</button>
+                </div>
+                <div class="form__check">
+                  <label class="form__label-check d-flex">
+                    <input type="checkbox" class="form__checkinput" checked="checked">
+                    <span class="form__checkbox"></span>
+                  </label>
+                  <div class="form__confirmation">
+                    <p>
+                      Нажимая кнопку «Отправить», я даю <a class="form__data" href="#">свое согласие на обработку моих
+                        персональных данных</a>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                      персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+                      данных
+                    </p>
+                  </div>
+
+                </div>
+              </fieldset>
+            </form>
           </div>
-          <a href="mailto:info@diakonvet.ru" class="contact__link contact__link--email">info@diakonvet.ru</a>
+
+          <!--  -->
         </div>
-      </div>
-
-      <div class="account">
-        <a class="account__item account__item--user" href="#"
-          style="background-image: url('images/icons/user.svg');">
-          <span class="sr-only">Зайти в свой кабинет</span>
-        </a>
-        <a class="account__item account__item--cart" href="#"
-          style="background-image: url('images/icons/cart.svg');">
-          <span class="sr-only">Открыть корзину</span>
-          <span class="account__count">2</span>
-        </a>
-
-        <form class="search-form" action="">
-          <button class="search-form__btn" type="submit">
-            <div class="search-form__img" style="background-image: url('images/icons/search.svg');"></div>
-          </button>
-          <input type="search" class="search-form__input">
-        </form>
+        <a href="mailto:info@diakonvet.ru" class="contact__link contact__link--email">info@diakonvet.ru</a>
       </div>
     </div>
+
+    <div class="account">
+      <a class="account__item account__item--user" href="#" style="background-image: url('images/icons/user.svg');">
+        <span class="sr-only">Зайти в свой кабинет</span>
+      </a>
+      <a class="account__item account__item--cart" href="#" style="background-image: url('images/icons/cart.svg');">
+        <span class="sr-only">Открыть корзину</span>
+        <span class="account__count">2</span>
+      </a>
+
+      <form class="search-form" action="">
+        <button class="search-form__btn" type="submit">
+          <div class="search-form__img" style="background-image: url('images/icons/search.svg');"></div>
+        </button>
+        <input type="search" class="search-form__input">
+      </form>
+    </div>
+  </div>
 
 
   <div class="header__bottom">
@@ -117,11 +156,14 @@
         
       </div>
       
-      <a class="cart" href="#">
-        <img class="cart__img" src="images/icons/cart.svg" alt="Cart">
-        <span class="cart__count">2</span>
-      </a>
-      
+
+      <a class="hero__cart cart" href="#">
+  <img class="cart__img" src="images/icons/cart.svg" alt="Cart">
+  <span class="cart__count">2</span>
+</a>
+
+
+    
     </div>
   </div>
 </div>
@@ -130,117 +172,165 @@
 
     <h2 class="section__title products__title">Товары и услуги</h2>
     <div class="products__text">
-    <p>Компания «ДИАКОН-ВЕТ» поставляет ветеринарную продукцию, предлагая комплексное оснащение клиник и лабораторий оборудованием, реагентами и расходными материалами, включая послепродажное сервисное обслуживание.​</p>
+      <p>Компания «ДИАКОН-ВЕТ» поставляет ветеринарную продукцию, предлагая комплексное оснащение клиник и лабораторий
+        оборудованием, реагентами и расходными материалами, включая послепродажное сервисное обслуживание.​</p>
+    </div>
+
+    <div class="products__wrapper">
+      <article class="products__item card">
+        <div class="products__top card__top card__top--blue">
+          <a href="#" class="card__link">
+            <img class="products__img card__img" src="images/products/product-1.png" alt="Лабораторная диагностика">
+          </a>
+        </div>
+        <div class="card__bottom card__bottom--short">
+          <a href="#" class="card__link">
+            <span class="products__name card__name card__name--small">Лабораторная диагностика</span>
+          </a>
+        </div>
+      </article>
+      <article class="products__item card">
+        <div class="products__top card__top card__top--blue">
+          <a href="#" class="card__link">
+            <img class="products__img card__img" src="images/products/product-2.png" alt="Лабораторная диагностика">
+          </a>
+        </div>
+        <div class="card__bottom card__bottom--short">
+          <a href="#" class="card__link">
+            <span class="products__name card__name card__name--small">Функциональная диагностика</span>
+          </a>
+        </div>
+      </article>
+      <article class="products__item card">
+        <div class="products__top card__top card__top--blue">
+          <a href="#" class="card__link">
+            <img class="products__img card__img" src="images/products/product-3.png" alt="Лабораторная диагностика">
+          </a>
+        </div>
+        <div class="card__bottom card__bottom--short">
+          <a href="#" class="card__link">
+            <span class="products__name card__name card__name--small">Терапия и хирургия</span>
+          </a>
+        </div>
+      </article>
+      <article class="products__item card">
+        <div class="products__top card__top card__top--blue">
+          <a href="#" class="card__link">
+            <img class="products__img card__img" src="images/products/product-4.png" alt="Лабораторная диагностика">
+          </a>
+        </div>
+        <div class="card__bottom card__bottom--short">
+          <a href="#" class="card__link">
+            <span class="products__name card__name card__name--small">Общелабораторное оборудование</span>
+          </a>
+        </div>
+      </article>
+      <article class="products__item card">
+        <div class="products__top card__top card__top--blue">
+          <a href="#" class="card__link">
+            <img class="products__img card__img" src="images/products/product-5.png" alt="Лабораторная диагностика">
+          </a>
+        </div>
+        <div class="card__bottom card__bottom--short">
+          <a href="#" class="card__link">
+            <span class="products__name card__name card__name--small">Сервис</span>
+          </a>
+        </div>
+      </article>
+      <a href="#" class="products__item card products__all">
+        <span>Вся продукция</span>
+      </a>
+
+    </div>
   </div>
-  
-  <div class="products__wrapper">
-    <article class="products__item card">
-      <div class="products__top card__top card__top--blue">
-        <img class="products__img card__img" src="images/products/product-1.png" alt="Лабораторная диагностика">
-      </div>
-      <div class="card__bottom card__bottom--short">
-        <span class="products__name card__name card__name--small">Лабораторная диагностика</span>
-      </div>
-    </article>
-    <article class="products__item card">
-      <div class="products__top card__top card__top--blue">
-        <img class="products__img card__img" src="images/products/product-2.png" alt="Лабораторная диагностика">
-      </div>
-      <div class="card__bottom card__bottom--short">
-        <span class="products__name card__name card__name--small">Функциональная диагностика</span>
-      </div>
-    </article>
-    <article class="products__item card">
-      <div class="products__top card__top card__top--blue">
-        <img class="products__img card__img" src="images/products/product-3.png" alt="Лабораторная диагностика">
-      </div>
-      <div class="card__bottom card__bottom--short">
-        <span class="products__name card__name card__name--small">Терапия и хирургия</span>
-      </div>
-    </article>
-    <article class="products__item card">
-      <div class="products__top card__top card__top--blue">
-        <img class="products__img card__img" src="images/products/product-4.png" alt="Лабораторная диагностика">
-      </div>
-      <div class="card__bottom card__bottom--short">
-        <span class="products__name card__name card__name--small">Общелабораторное оборудование</span>
-      </div>
-    </article>
-    <article class="products__item card">
-      <div class="products__top card__top card__top--blue">
-        <img class="products__img card__img" src="images/products/product-5.png" alt="Лабораторная диагностика">
-      </div>
-      <div class="card__bottom card__bottom--short">
-        <span class="products__name card__name card__name--small">Сервис</span>
-      </div>
-    </article>
-    <a href="#" class="products__item card products__all">
-      <span>Вся продукция</span>
-    </a>
-    
-  </div>
-</div>
 </section>
   <section class="section hits dark-bg">
-  
+
   <div class="container">
     <h2 class="section__title section__title">Хиты продаж</h2>
-    
+
     <div class="section__slider">
       <article class="section__card card">
-        <div class="card__top">
-          <img src="images/hits/hit-1.png" alt="" class="card__img">
-        </div>
-        <div class="card__bottom card__bottom--dark">
-          <h3 class="card__name">Автоматический гематологический анализатор DF50 Vet</h3>
-          <div class="card__text">
-            <p>Наш флагман из приборов по гематологии</p>
-          </div>
-        </div>
-      </article>
+  <div class="card__top">
+    <a href="#" class="card__link">
+      <img src="images/hits/hit-1.png" alt="" class="card__img">
+    </a>
+  </div>
+  <div class="card__bottom">
+    <a href="#" class="card__link">
+      <h3 class="card__name">Автоматический гематологический анализатор DF50 Vet</h3>
+    </a>
+    <div class="card__text">
+      <a href="#" class="card__link">
+        <p>Наш флагман из приборов по гематологии</p>
+      </a>
+    </div>
+  </div>
+</article>
 
       <article class="section__card card">
-        <div class="card__top">
-          <img src="images/hits/hit-2.png" alt="" class="card__img">
-        </div>
-        <div class="card__bottom">
-          <h3 class="card__name">Биохимический экспресс-анализатор Skyla VB1</h3>
-          <div class="card__text">
-            <p>Очень маржинальный наш прибор, продавать сплошное удовольствие!</p>
-          </div>
-        </div>
-      </article>
+  <div class="card__top">
+    <a href="#" class="card__link">
+      <img src="images/hits/hit-2.png" alt="" class="card__img">
+    </a>
+  </div>
+  <div class="card__bottom">
+    <a href="#" class="card__link">
+      <h3 class="card__name">Биохимический экспресс-анализатор Skyla VB1</h3>
+    </a>
+    <div class="card__text">
+      <a href="#" class="card__link">
+        <p>Очень маржинальный наш прибор, продавать сплошное удовольствие!</p>
+      </a>
+    </div>
+  </div>
+</article>
+
 
       <article class="section__card card">
-        <div class="card__top">
-          <img src="images/hits/hit-3.png" alt="" class="card__img">
-        </div>
-        <div class="card__bottom">
-          <h3 class="card__name">Автоматический гематологический анализатор DF50 Vet</h3>
-          <div class="card__text">
-            <p>Наш флагман из приборов по гематологии</p>
-          </div>
-        </div>
-      </article>
+  <div class="card__top">
+    <a href="#" class="card__link">
+      <img src="images/hits/hit-3.png" alt="" class="card__img">
+    </a>
+  </div>
+  <div class="card__bottom">
+    <a href="#" class="card__link">
+      <h3 class="card__name">Автоматический гематологический анализатор DF50 Vet</h3>
+    </a>
+    <div class="card__text">
+      <a href="#" class="card__link">
+        <p>Наш флагман из приборов по гематологии</p>
+      </a>
+    </div>
+  </div>
+</article>
 
       <article class="section__card card">
-        <div class="card__top">
-          <img src="images/hits/hit-3.png" alt="" class="card__img">
-        </div>
-        <div class="card__bottom">
-          <h3 class="card__name">Автоматический гематологический анализатор DF50 Vet</h3>
-          <div class="card__text">
-            <p>Наш флагман из приборов по гематологии</p>
-          </div>
-        </div>
-      </article>
+  <div class="card__top">
+    <a href="#" class="card__link">
+      <img src="images/hits/hit-1.png" alt="" class="card__img">
+    </a>
+  </div>
+  <div class="card__bottom">
+    <a href="#" class="card__link">
+      <h3 class="card__name">Автоматический гематологический анализатор DF50 Vet</h3>
+    </a>
+    <div class="card__text">
+      <a href="#" class="card__link">
+        <p>Наш флагман из приборов по гематологии</p>
+      </a>
+    </div>
+  </div>
+</article>
 
-      
+
+
+
     </div>
   </div>
 
 
-  
+
 </section>
   <section class="section new">
   
@@ -249,52 +339,77 @@
     
     <div class="section__slider">
       <article class="section__card card">
-        <div class="card__top">
-          <img src="images/hits/hit-1.png" alt="" class="card__img">
-        </div>
-        <div class="card__bottom card__bottom--dark">
-          <h3 class="card__name">Автоматический гематологический анализатор DF50 Vet</h3>
-          <div class="card__text">
-            <p>Наш флагман из приборов по гематологии</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="section__card card">
-        <div class="card__top">
-          <img src="images/hits/hit-2.png" alt="" class="card__img">
-        </div>
-        <div class="card__bottom">
-          <h3 class="card__name">Биохимический экспресс-анализатор Skyla VB1</h3>
-          <div class="card__text">
-            <p>Очень маржинальный наш прибор, продавать сплошное удовольствие!</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="section__card card">
-        <div class="card__top">
-          <img src="images/hits/hit-1.png" alt="" class="card__img">
-        </div>
-        <div class="card__bottom card__bottom--dark">
-          <h3 class="card__name">Автоматический гематологический анализатор DF50 Vet</h3>
-          <div class="card__text">
-            <p>Наш флагман из приборов по гематологии</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="section__card card">
-        <div class="card__top">
-          <img src="images/hits/hit-3.png" alt="" class="card__img">
-        </div>
-        <div class="card__bottom">
-          <h3 class="card__name">Автоматический гематологический анализатор DF50 Vet</h3>
-          <div class="card__text">
-            <p>Наш флагман из приборов по гематологии</p>
-          </div>
-        </div>
-      </article>
+  <div class="card__top">
+    <a href="#" class="card__link">
+      <img src="images/hits/hit-2.png" alt="" class="card__img">
+    </a>
+  </div>
+  <div class="card__bottom">
+    <a href="#" class="card__link">
+      <h3 class="card__name">Автоматический гематологический анализатор DF50 Vet</h3>
+    </a>
+    <div class="card__text">
+      <a href="#" class="card__link">
+        <p>Наш флагман из приборов по гематологии</p>
+      </a>
+    </div>
+  </div>
+</article>
+  
+        <article class="section__card card">
+  <div class="card__top">
+    <a href="#" class="card__link">
+      <img src="images/hits/hit-1.png" alt="" class="card__img">
+    </a>
+  </div>
+  <div class="card__bottom">
+    <a href="#" class="card__link">
+      <h3 class="card__name">Биохимический экспресс-анализатор Skyla VB1</h3>
+    </a>
+    <div class="card__text">
+      <a href="#" class="card__link">
+        <p>Очень маржинальный наш прибор, продавать сплошное удовольствие!</p>
+      </a>
+    </div>
+  </div>
+</article>
+  
+  
+        <article class="section__card card">
+  <div class="card__top">
+    <a href="#" class="card__link">
+      <img src="images/hits/hit-3.png" alt="" class="card__img">
+    </a>
+  </div>
+  <div class="card__bottom">
+    <a href="#" class="card__link">
+      <h3 class="card__name">Автоматический гематологический анализатор DF50 Vet</h3>
+    </a>
+    <div class="card__text">
+      <a href="#" class="card__link">
+        <p>Наш флагман из приборов по гематологии</p>
+      </a>
+    </div>
+  </div>
+</article>
+  
+        <article class="section__card card">
+  <div class="card__top">
+    <a href="#" class="card__link">
+      <img src="images/hits/hit-1.png" alt="" class="card__img">
+    </a>
+  </div>
+  <div class="card__bottom">
+    <a href="#" class="card__link">
+      <h3 class="card__name">Автоматический гематологический анализатор DF50 Vet</h3>
+    </a>
+    <div class="card__text">
+      <a href="#" class="card__link">
+        <p>Наш флагман из приборов по гематологии</p>
+      </a>
+    </div>
+  </div>
+</article>
 
       
     </div>
@@ -307,36 +422,60 @@
   <div class="container">
     <h2 class="section__title">Акции</h2>
     <div class="sale__slider">
+      
       <article class="post">
-        <div class="post__top">
-          <img src="images/sale/img-1.jpg" alt="" class="post__img">
-        </div>
-        <h2 class="post__title">XXIX Московский Международный Ветеринарный Конгресс</h2>
-      </article>
+  <div class="post__top">
+    <a href="#" class="post__link">
+      <img src="images/sale/img-1.jpg" alt="" class="post__img">
+    </a>
+  </div>
+  <a href="#" class="post__link">
+    <h2 class="post__title">XXIX Московский Международный Ветеринарный Конгресс</h2>
+  </a>
+</article>
+
       <article class="post">
-        <div class="post__top">
-          <img src="images/sale/img-2.jpg" alt="" class="post__img">
-        </div>
-        <h2 class="post__title">Программа повышения квалификации “Биохимические исследования”</h2>
-      </article>
+  <div class="post__top">
+    <a href="#" class="post__link">
+      <img src="images/sale/img-2.jpg" alt="" class="post__img">
+    </a>
+  </div>
+  <a href="#" class="post__link">
+    <h2 class="post__title">Программа повышения квалификации “Биохимические исследования”</h2>
+  </a>
+</article>
+
       <article class="post">
-        <div class="post__top">
-          <img src="images/sale/img-3.jpg" alt="" class="post__img">
-        </div>
-        <h2 class="post__title">Семинар “Современные подходы в лабораторной диагностике”</h2>
-      </article>
+  <div class="post__top">
+    <a href="#" class="post__link">
+      <img src="images/sale/img-3.jpg" alt="" class="post__img">
+    </a>
+  </div>
+  <a href="#" class="post__link">
+    <h2 class="post__title">Семинар “Современные подходы в лабораторной диагностике”</h2>
+  </a>
+</article>
+
       <article class="post">
-        <div class="post__top">
-          <img src="images/sale/img-4.jpg" alt="" class="post__img">
-        </div>
-        <h2 class="post__title">Выставка ЗООИНДУСТРИЯ 2021</h2>
-      </article>
+  <div class="post__top">
+    <a href="#" class="post__link">
+      <img src="images/sale/img-4.jpg" alt="" class="post__img">
+    </a>
+  </div>
+  <a href="#" class="post__link">
+    <h2 class="post__title">Выставка ЗООИНДУСТРИЯ 2021</h2>
+  </a>
+</article>
       <article class="post">
-        <div class="post__top">
-          <img src="images/sale/img-1.jpg" alt="" class="post__img">
-        </div>
-        <h2 class="post__title">XXIX Московский Международный Ветеринарный Конгресс</h2>
-      </article>
+  <div class="post__top">
+    <a href="#" class="post__link">
+      <img src="images/sale/img-1.jpg" alt="" class="post__img">
+    </a>
+  </div>
+  <a href="#" class="post__link">
+    <h2 class="post__title">XXIX Московский Международный Ветеринарный Конгресс</h2>
+  </a>
+</article>
 
     </div>
   </div>
@@ -345,7 +484,7 @@
   <div class="container">
     <div class="request__inner">
       <div class="request__content">
-        <h3 class="request__title">Получите <span>бесплатно</span> методические рекомендации по применению наборов
+        <h3 class="request__title">Получите <span class="request__span">бесплатно</span> методические рекомендации по применению наборов
           реагентов «ДиаВетТест»</h3>
         <div class="request__text">
           <p>Для биохимических исследований сыворотки (плазмы) крови животных на автматическом анализаторе</p>
@@ -356,24 +495,31 @@
         <div class="form-block__text">
           <p>Заполните Ваши контактные данные и мы отправим «Методические рекомендации»</p>
         </div>
-        <form action="" class="form-block__form">
-          <input type="text" class="form-block__input" placeholder="Имя">
-          <input type="text" class="form-block__input" placeholder="E-mail">
-          <input type="text" class="form-block__input" placeholder="Телефон">
-          <div class="form-block__wrapper">
-            <img src="images/captcha.png" class="form-block__captcha">
-            <button class="btn form-block__btn" type="submit">Отправить</button>
+        <form action="" class="form">
+          <label class="form__label form__label--asterisk">
+            <input type="text" class="form__input" placeholder="Имя">
+          </label>
+          <label class="form__label form__label--asterisk">
+            <input type="text" class="form__input" placeholder="E-mail">
+          </label>
+          <label class="form__label form__label--asterisk">
+            <input type="text" class="form__input" placeholder="Телефон">
+          </label>
+          <div class="form__wrapper">
+            <img src="images/captcha.png" class="form__captcha">
+            <button class="btn form__btn" type="submit">Отправить</button>
           </div>
-          <div class="form-block__check">
-            <label class="form-block__label">
-              <input type="checkbox" class="form-block__checkbox" checked="checked">
-              <span class="form-block__checkmark"></span>
+          <div class="form__check">
+            <label class="form__label-check d-flex">
+              <input type="checkbox" class="form__checkinput" checked="checked">
+              <span class="form__checkbox"></span>
             </label>
-            <div class="form-block__confirmation">
+            <div class="form__confirmation">
               <p>
-                Нажимая кнопку «Отправить», я даю <a class="form-block__data" href="#" >свое согласие на обработку моих персональных данных</a>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных
+                Нажимая кнопку «Отправить», я даю <a class="form__data" href="#" >свое согласие на обработку моих персональных данных</a>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных
               </p>
             </div>
+            
           </div>
         </form>
       </div>
@@ -384,36 +530,60 @@
   <div class="container">
     <h2 class="section__title">Новости</h2>
     <div class="news__slider">
+
       <article class="post">
-        <div class="post__top">
-          <img src="images/sale/img-1.jpg" alt="" class="post__img">
-        </div>
-        <h2 class="post__title">XXIX Московский Международный Ветеринарный Конгресс</h2>
-      </article>
+  <div class="post__top">
+    <a href="#" class="post__link">
+      <img src="images/sale/img-1.jpg" alt="" class="post__img">
+    </a>
+  </div>
+  <a href="#" class="post__link">
+    <h2 class="post__title">XXIX Московский Международный Ветеринарный Конгресс</h2>
+  </a>
+</article>
+
       <article class="post">
-        <div class="post__top">
-          <img src="images/sale/img-2.jpg" alt="" class="post__img">
-        </div>
-        <h2 class="post__title">Программа повышения квалификации “Биохимические исследования”</h2>
-      </article>
+  <div class="post__top">
+    <a href="#" class="post__link">
+      <img src="images/sale/img-2.jpg" alt="" class="post__img">
+    </a>
+  </div>
+  <a href="#" class="post__link">
+    <h2 class="post__title">Программа повышения квалификации “Биохимические исследования”</h2>
+  </a>
+</article>
+
       <article class="post">
-        <div class="post__top">
-          <img src="images/sale/img-3.jpg" alt="" class="post__img">
-        </div>
-        <h2 class="post__title">Семинар “Современные подходы в лабораторной диагностике”</h2>
-      </article>
+  <div class="post__top">
+    <a href="#" class="post__link">
+      <img src="images/sale/img-3.jpg" alt="" class="post__img">
+    </a>
+  </div>
+  <a href="#" class="post__link">
+    <h2 class="post__title">Семинар “Современные подходы в лабораторной диагностике”</h2>
+  </a>
+</article>
+
       <article class="post">
-        <div class="post__top">
-          <img src="images/sale/img-4.jpg" alt="" class="post__img">
-        </div>
-        <h2 class="post__title">Выставка ЗООИНДУСТРИЯ 2021</h2>
-      </article>
+  <div class="post__top">
+    <a href="#" class="post__link">
+      <img src="images/sale/img-4.jpg" alt="" class="post__img">
+    </a>
+  </div>
+  <a href="#" class="post__link">
+    <h2 class="post__title">Выставка ЗООИНДУСТРИЯ 2021</h2>
+  </a>
+</article>
       <article class="post">
-        <div class="post__top">
-          <img src="images/sale/img-1.jpg" alt="" class="post__img">
-        </div>
-        <h2 class="post__title">XXIX Московский Международный Ветеринарный Конгресс</h2>
-      </article>
+  <div class="post__top">
+    <a href="#" class="post__link">
+      <img src="images/sale/img-1.jpg" alt="" class="post__img">
+    </a>
+  </div>
+  <a href="#" class="post__link">
+    <h2 class="post__title">XXIX Московский Международный Ветеринарный Конгресс</h2>
+  </a>
+</article>
 
     </div>
   </div>
@@ -492,52 +662,54 @@
   <div class="container">
     <h2 class="section__title">Статьи</h2>
     <div class="articles__slider">
+
       <article class="articles__slide articles-post">
-        <div class="articles-post__top">
-          <img class="articles-post__img" src="images/articles/article-1.jpg"
-            alt="Рекомендации по техническому обслуживанию лабораторного оборудования">
-        </div>
-        <div class="articles-post__content">
-          <h3 class="articles-post__title">Рекомендации по техническому обслуживанию лабораторного оборудования</h3>
-          <div class="articles-post__text">
-            <p>После пусконаладки и ввода в эксплуатацию лабораторное оборудование необходимо периодически проверять и
-              обслуживать.</p>
-          </div>
-        </div>
-        <span class="articles-post__valid dark-bg">
-          Действует до: <time  class="articles-post__date">26 апреля 2021</time>
-        </span>
-      </article>
+  <div class="articles-post__top">
+    <img class="articles-post__img" src="images/articles/article-1.jpg"
+      alt="Рекомендации по техническому обслуживанию лабораторного оборудования">
+  </div>
+  <div class="articles-post__content">
+    <h3 class="articles-post__title">Рекомендации по техническому обслуживанию лабораторного оборудования</h3>
+    <div class="articles-post__text">
+      <p>После пусконаладки и ввода в эксплуатацию лабораторное оборудование необходимо периодически проверять и обслуживать.</p>
+    </div>
+  </div>
+  <span class="articles-post__valid dark-bg">
+    Действует до: <time  class="articles-post__date">26 апреля 2021</time>
+  </span>
+</article>
+
       <article class="articles__slide articles-post">
-        <div class="articles-post__top">
-          <img class="articles-post__img" src="images/articles/article-2.jpg"
-            alt="Миниатюризация как тенденция в ветеринарной функциональной диагностике">
-        </div>
-        <div class="articles-post__content">
-          <h3 class="articles-post__title">Миниатюризация как тенденция в ветеринарной функциональной диагностике</h3>
-          <div class="articles-post__text">
-            <p>До появления инструментов функциональной диагностики проверить состояние того или иного органа не всегда было возможно без хирургического вмешательства.</p>
-          </div>
-        </div>
-        <span class="articles-post__valid dark-bg">
-          Действует до: <time  class="articles-post__date">28 апреля 2021</time>
-        </span>
-      </article>
+  <div class="articles-post__top">
+    <img class="articles-post__img" src="images/articles/article-2.jpg"
+      alt="Рекомендации по техническому обслуживанию лабораторного оборудования">
+  </div>
+  <div class="articles-post__content">
+    <h3 class="articles-post__title">Миниатюризация как тенденция в ветеринарной функциональной диагностике</h3>
+    <div class="articles-post__text">
+      <p>До появления инструментов функциональной диагностики проверить состояние того или иного органа не всегда было возможно без хирургического вмешательства.</p>
+    </div>
+  </div>
+  <span class="articles-post__valid dark-bg">
+    Действует до: <time  class="articles-post__date">28 апреля 2021</time>
+  </span>
+</article>
       <article class="articles__slide articles-post">
-        <div class="articles-post__top">
-          <img class="articles-post__img" src="images/articles/article-3.jpg"
-            alt="Преимущества газового наркоза перед инъекционным">
-        </div>
-        <div class="articles-post__content">
-          <h3 class="articles-post__title">Преимущества газового наркоза перед инъекционным</h3>
-          <div class="articles-post__text">
-            <p>В ветеринарии используется два основных вида наркоза: инъекционный и газовый.</p>
-          </div>
-        </div>
-        <span class="articles-post__valid dark-bg">
-          Действует до: <time class="articles-post__date">26 апреля 2021</time>
-        </span>
-      </article>
+  <div class="articles-post__top">
+    <img class="articles-post__img" src="images/articles/article-3.jpg"
+      alt="Рекомендации по техническому обслуживанию лабораторного оборудования">
+  </div>
+  <div class="articles-post__content">
+    <h3 class="articles-post__title">Преимущества газового наркоза перед инъекционным</h3>
+    <div class="articles-post__text">
+      <p>В ветеринарии используется два основных вида наркоза: инъекционный и газовый.</p>
+    </div>
+  </div>
+  <span class="articles-post__valid dark-bg">
+    Действует до: <time  class="articles-post__date">28 апреля 2021</time>
+  </span>
+</article>
+
     </div>
   </div>
 </section>
@@ -883,7 +1055,46 @@
         <address class="contacts__address">
           Московская область, г. Пущино, улица Грузовая, 1А, 142290
         </address>
-        <a href="#" class="btn contacts__consultation">Заказать консультацию</a>
+        <a class="btn contacts__consultation"  data-fancybox href="#footer-popup">Заказать консультацию</a>
+        <div class="contact__popup" id="footer-popup" style="display: none;">
+          <form action="" class="form">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Заказать консультацию</legend>
+              <label class="form__label form__label--popup  form__label--asterisk">
+                <input type="text" class="form__input" placeholder="Имя">
+              </label>
+              <label class="form__label form__label--popup  form__label--asterisk">
+                <input type="text" class="form__input" placeholder="E-mail">
+              </label>
+              <label class="form__label form__label--popup  form__label--asterisk">
+                <input type="text" class="form__input" placeholder="Телефон">
+              </label>
+              <label class="form__label form__label--popup">
+                <textarea class="form__textarea" placeholder="Ваш вопрос"></textarea>
+              </label>
+
+              <div class="form__wrapper">
+                <img src="images/captcha.png" class="form__captcha">
+                <button class="btn form__btn" type="submit">Отправить</button>
+              </div>
+              <div class="form__check">
+                <label class="form__label-check d-flex">
+                  <input type="checkbox" class="form__checkinput" checked="checked">
+                  <span class="form__checkbox"></span>
+                </label>
+                <div class="form__confirmation">
+                  <p>
+                    Нажимая кнопку «Отправить», я даю <a class="form__data" href="#">свое согласие на обработку моих
+                      персональных данных</a>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                    персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+                    данных
+                  </p>
+                </div>
+
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </div>
     </div>
   </div>

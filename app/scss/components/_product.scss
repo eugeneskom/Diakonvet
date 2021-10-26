@@ -11,6 +11,7 @@
     justify-content: center;
     border-bottom: 1px solid $t-10;
     position: relative;
+    height: 229px;
   }
 
   &__thumb {
@@ -33,24 +34,23 @@
     right: 18px;
     transition: background-color 0.3s ease-in-out;
 
-    &:hover{
+    &:hover {
       background: #DFF2D0;
     }
-    &:focus{
+
+    &:focus {
       box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
     }
-    &:active{
+
+    &:active {
       box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
   }
 
   &__heart {
-    display: block;
     width: 18px;
     height: 16px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left 3px top 3px right 3px bottom 3px;
+    fill: $link-hover;
   }
 
   &__body {
@@ -83,10 +83,12 @@
   &__present {
     font-size: 14px;
     color: $t-main;
-    &--true{
+
+    &--true {
       position: relative;
       padding-left: 19px;
-      &::before{
+
+      &::before {
         content: "";
         position: absolute;
         left: 0;
@@ -99,7 +101,8 @@
         background-size: contain;
       }
     }
-    &--false{
+
+    &--false {
       color: $t-empty;
     }
   }
@@ -118,11 +121,13 @@
     &:hover {
       background-color: $t-100;
     }
-    &:focus{
+
+    &:focus {
       box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
       outline: transparent;
     }
-    &:active{
+
+    &:active {
       box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
       background-color: $link-hover;
 

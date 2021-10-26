@@ -134,7 +134,46 @@
         <address class="contacts__address">
           Московская область, г. Пущино, улица Грузовая, 1А, 142290
         </address>
-        <a href="#" class="btn contacts__consultation">Заказать консультацию</a>
+        <a class="btn contacts__consultation"  data-fancybox href="#footer-popup">Заказать консультацию</a>
+        <div class="contact__popup" id="footer-popup" style="display: none;">
+          <form action="" class="form">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Заказать консультацию</legend>
+              <label class="form__label form__label--popup  form__label--asterisk">
+                <input type="text" class="form__input" placeholder="Имя">
+              </label>
+              <label class="form__label form__label--popup  form__label--asterisk">
+                <input type="text" class="form__input" placeholder="E-mail">
+              </label>
+              <label class="form__label form__label--popup  form__label--asterisk">
+                <input type="text" class="form__input" placeholder="Телефон">
+              </label>
+              <label class="form__label form__label--popup">
+                <textarea class="form__textarea" placeholder="Ваш вопрос"></textarea>
+              </label>
+
+              <div class="form__wrapper">
+                <img src="images/captcha.png" class="form__captcha">
+                <button class="btn form__btn" type="submit">Отправить</button>
+              </div>
+              <div class="form__check">
+                <label class="form__label-check d-flex">
+                  <input type="checkbox" class="form__checkinput" checked="checked">
+                  <span class="form__checkbox"></span>
+                </label>
+                <div class="form__confirmation">
+                  <p>
+                    Нажимая кнопку «Отправить», я даю <a class="form__data" href="#">свое согласие на обработку моих
+                      персональных данных</a>, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                    персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных
+                    данных
+                  </p>
+                </div>
+
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </div>
     </div>
   </div>

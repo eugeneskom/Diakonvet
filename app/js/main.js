@@ -204,25 +204,27 @@ $(function () {
   // select shop-filter
 
 
-  setTimeout(function() {
+  setTimeout(function () {
     $('.shop-filter__select, .product-content__amount').styler();
   }, 100)
 
 
 
-  
+
   let menuHeading = document.querySelectorAll('.assortment__title');
   console.log(menuHeading);
   let dropdownMenu = document.querySelectorAll('.assortment__list');
   console.log(dropdownMenu);
 
-  for (let i = 0; i < dropdownMenu.length; i++) {
-    menuHeading[i].addEventListener('click', () => {
-      for (let k = 0; k < dropdownMenu.length; k++) {
-        menuHeading[k].nextElementSibling.classList.toggle('active');
+  menuHeading.forEach((title,index) => {
+    title.addEventListener("click", () => {
+      for(let i = 0; i < dropdownMenu.length; i++){
+        dropdownMenu[i].classList.remove('active');
       }
+      dropdownMenu[index].classList.add('active');
+      
     })
-  }
+  })
 
 
   $('.slider-thumb').slick({
@@ -248,8 +250,29 @@ $(function () {
 
 
 
+  const tabs = document.querySelector('.tabs');
+  const tabButton = document.querySelectorAll('.tabs__btn');
+  const contents = document.querySelectorAll('.tabs__page');
+
+  tabs.onclick = e => {
+    const id = e.target.dataset.id;
+    if (id) {
+      tabButton.forEach(btn => {
+        btn.classList.remove("active");
+      });
+      e.target.classList.add("active");
+
+      contents.forEach(content => {
+        content.classList.remove("active");
+      });
+      const element = document.getElementById(id);
+      element.classList.add("active");
+    }
+  }
 
 
+  // FANCYBOX POPUPS
+  $("a.fancybox").fancybox()
 
 
 

@@ -49,36 +49,9 @@
 
   &__cart {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 81px;
-    height: 81px;
     top: 57px;
     right: 13%;
-    background-color: $t-lightest;
-    border-radius: 50%;
-    @include r($r-md){
-      display: none;
-    }
+
   }
 
-  &__cart-img {
-    width: 37px;
-    height: 35px;
-    object-fit: cover;
-  }
-
-  &__cart-count {
-    position: absolute;
-    right: 19px;
-    top: 19px;
-    text-align: center;
-    line-height: 16px;
-    font-size: 11px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: $thirdly-bg;
-  }
 }

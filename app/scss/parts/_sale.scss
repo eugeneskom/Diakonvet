@@ -1,5 +1,5 @@
-.sale{
-  &__slider{
+.sale {
+  &__slider {
     display: flex;
   }
 
@@ -7,20 +7,22 @@
 
 
   .slick-slide {
-    height: 100%; 
+    height: 100%;
 
 
   }
+
   .slick-track {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: stretch;
-    margin: 0 -15px;
-    @include r($r-md){
+    margin: 0;
+
+    @include r($r-md) {
       margin: 0;
     }
   }
 
-  
+
 }

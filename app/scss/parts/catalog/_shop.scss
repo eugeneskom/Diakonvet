@@ -18,20 +18,15 @@
   margin-bottom: 53px;
   line-height: 1.5;
   color: $t-empty;
-  &__label{
-    margin-right: 8px;
-  }
 
-  &__select{
-    position: relative;
-    cursor: pointer;
-  }
 
-  &__checked{
+
+  &__checked {
     color: $t-title;
     position: relative;
     padding-right: 15px;
-    &::after{
+
+    &::after {
       content: "";
       position: absolute;
       right: 0;
@@ -45,33 +40,52 @@
     }
   }
 
-  &__dropdown{
-    display: none;
-    position: absolute;
-    z-index: 10;
-    background-color: $sidebar-bg;
-    top: 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 8px;
-    &--active{
-      display: block;
-      min-width: 200px;
-      max-width: 300px;
+
+  .jq-selectbox {
+    &.focused .jq-selectbox__select{
+      border: none;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+    &__select {
+      height: auto;
+      padding: 0 30px 0 0;
+      margin-left: 6px;
+      border: none;
+      border-bottom-color: transparent;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      font: 16px/24px 'OpenSans-Regular', sans-serif;
+      color: $t-title;
+      text-shadow: none;
+    }
+
+    &__trigger {
+      border-left: none;
+      top: 3px;
+    }
+
+    &__trigger-arrow {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: none;
+      width: 8px;
+      height: 6px;
+      &::after{
+        @include p-center;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/icons/select-arrow.svg');
+        @include img-cover;
+      }
     }
   }
 
-  &__option{
-    padding: 15px 15px;
-    &:hover{
-      background-color: $dark-bg;
-    }
-  }
 
 
-  .jquery-selectbox{
-    &__dropdown ul{
-      top: 5px;
-    }
-  }
-  
+
+
+
+
 }
